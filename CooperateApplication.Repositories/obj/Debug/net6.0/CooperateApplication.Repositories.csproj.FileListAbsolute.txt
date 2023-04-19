@@ -1,0 +1,14 @@
+D:\Doantotnghiep\CooperateApplication.Repositories\bin\Debug\net6.0\CooperateApplication.Repositories.deps.json
+D:\Doantotnghiep\CooperateApplication.Repositories\bin\Debug\net6.0\CooperateApplication.Repositories.runtimeconfig.json
+D:\Doantotnghiep\CooperateApplication.Repositories\bin\Debug\net6.0\CooperateApplication.Repositories.dll
+D:\Doantotnghiep\CooperateApplication.Repositories\bin\Debug\net6.0\CooperateApplication.Repositories.pdb
+D:\Doantotnghiep\CooperateApplication.Repositories\obj\Debug\net6.0\CooperateApplication.Repositories.csproj.AssemblyReference.cache
+D:\Doantotnghiep\CooperateApplication.Repositories\obj\Debug\net6.0\CooperateApplication.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\Doantotnghiep\CooperateApplication.Repositories\obj\Debug\net6.0\CooperateApplication.Repositories.AssemblyInfoInputs.cache
+D:\Doantotnghiep\CooperateApplication.Repositories\obj\Debug\net6.0\CooperateApplication.Repositories.AssemblyInfo.cs
+D:\Doantotnghiep\CooperateApplication.Repositories\obj\Debug\net6.0\CooperateApplication.Repositories.csproj.CoreCompileInputs.cache
+D:\Doantotnghiep\CooperateApplication.Repositories\obj\Debug\net6.0\CooperateApplication.Repositories.dll
+D:\Doantotnghiep\CooperateApplication.Repositories\obj\Debug\net6.0\refint\CooperateApplication.Repositories.dll
+D:\Doantotnghiep\CooperateApplication.Repositories\obj\Debug\net6.0\CooperateApplication.Repositories.pdb
+D:\Doantotnghiep\CooperateApplication.Repositories\obj\Debug\net6.0\CooperateApplication.Repositories.genruntimeconfig.cache
+D:\Doantotnghiep\CooperateApplication.Repositories\obj\Debug\net6.0\ref\CooperateApplication.Repositories.dll

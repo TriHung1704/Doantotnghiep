@@ -76,14 +76,23 @@ namespace CooperateApplication.Repositories.Context
             modelBuilder.Entity<Department>().HasData(new Department { Id = 4, Name = "Khoa Xây Dựng", UniversityId = 1, CreateAt = DateTime.UtcNow });
             modelBuilder.Entity<Department>().HasData(new Department { Id = 5, Name = "Khoa Hóa Học và Môi Trường", UniversityId = 1, CreateAt = DateTime.UtcNow });
             modelBuilder.Entity<Majors>().HasData(new Majors { Id = 1, Name = "Ngành Công Nghệ Thông Tin", DepartmentId = 1, CreateAt = DateTime.UtcNow });
-            modelBuilder.Entity<Majors>().HasData(new Majors { Id = 2, Name = "Ngành Tự Động Hóa", DepartmentId = 2, CreateAt = DateTime.UtcNow });
-            modelBuilder.Entity<Majors>().HasData(new Majors { Id = 3, Name = "Ngành Công nghệ kỹ thuật ô tô", DepartmentId = 3, CreateAt = DateTime.UtcNow });
-            modelBuilder.Entity<Majors>().HasData(new Majors { Id = 4, Name = "Ngành Công nghệ vật liệu", DepartmentId = 4, CreateAt = DateTime.UtcNow });
-            modelBuilder.Entity<Majors>().HasData(new Majors { Id = 5, Name = "Ngành Kỹ Thuật thực phẩm", DepartmentId = 5, CreateAt = DateTime.UtcNow });
-
+            modelBuilder.Entity<Majors>().HasData(new Majors { Id = 2, Name = "Ngành Công nghệ kỹ thuật nhiệt", DepartmentId = 2, CreateAt = DateTime.UtcNow });
+            modelBuilder.Entity<Majors>().HasData(new Majors { Id = 3, Name = "Ngành Công nghệ kỹ thuật điện, điện tử", DepartmentId = 2, CreateAt = DateTime.UtcNow });
+            modelBuilder.Entity<Majors>().HasData(new Majors { Id = 5, Name = "Ngành Công nghệ kỹ thuật điện tử - viễn thông", DepartmentId = 2, CreateAt = DateTime.UtcNow });
+            modelBuilder.Entity<Majors>().HasData(new Majors { Id = 6, Name = "Ngành Công nghệ kỹ thuật điều khiển và tự động hóa", DepartmentId = 2, CreateAt = DateTime.UtcNow });
+            modelBuilder.Entity<Majors>().HasData(new Majors { Id = 7, Name = "Ngành Công nghệ kỹ thuật cơ khí", DepartmentId = 3, CreateAt = DateTime.UtcNow });
+            modelBuilder.Entity<Majors>().HasData(new Majors { Id = 8, Name = "Ngành Công nghệ kỹ thuật cơ điện tử", DepartmentId = 3, CreateAt = DateTime.UtcNow });
+            modelBuilder.Entity<Majors>().HasData(new Majors { Id = 9, Name = "Ngành Công nghệ kỹ thuật xây dựng", DepartmentId = 4, CreateAt = DateTime.UtcNow });
+            modelBuilder.Entity<Majors>().HasData(new Majors { Id = 10, Name = "Ngành Công nghệ kỹ thuật giao thông", DepartmentId = 4, CreateAt = DateTime.UtcNow });
+            modelBuilder.Entity<Majors>().HasData(new Majors { Id = 11, Name = "Ngành Công nghệ kỹ thuật kiến trúc", DepartmentId = 4, CreateAt = DateTime.UtcNow });
+            modelBuilder.Entity<Majors>().HasData(new Majors { Id = 12, Name = "Kỹ thuật cơ sở hạ tầng", DepartmentId = 4, CreateAt = DateTime.UtcNow });
+            modelBuilder.Entity<Majors>().HasData(new Majors { Id = 13, Name = "Công nghệ kỹ thuật môi trường", DepartmentId = 5, CreateAt = DateTime.UtcNow });
+            modelBuilder.Entity<Majors>().HasData(new Majors { Id = 14, Name = "Ngành Kỹ Thuật thực phẩm", DepartmentId = 5, CreateAt = DateTime.UtcNow });
+            modelBuilder.Entity<Majors>().HasData(new Majors { Id = 15, Name = "Ngành Công nghệ vật liệu", DepartmentId = 5, CreateAt = DateTime.UtcNow });
             //class student
             modelBuilder.Entity<ClassStudent>().HasData(new ClassStudent { Id = 1, MajorsId = 1,  Name = "20T1", CreateAt = DateTime.UtcNow });
             modelBuilder.Entity<ClassStudent>().HasData(new ClassStudent { Id = 2, MajorsId = 1,  Name = "20T2", CreateAt = DateTime.UtcNow });
+
 
         }
         //protected override void OnConfiguring(DbContextOptionsBuilder options)
@@ -102,7 +111,7 @@ namespace CooperateApplication.Repositories.Context
         public CooperationDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<CooperationDbContext>();
-            optionsBuilder.UseMySQL("server=localhost; port=3306; database=CooperationDb; user=root; password=1234");
+            optionsBuilder.UseMySQL("server=localhost; port=3306; database=DoanDb; user=root; password=1234");
 
             return new CooperationDbContext(optionsBuilder.Options);
 

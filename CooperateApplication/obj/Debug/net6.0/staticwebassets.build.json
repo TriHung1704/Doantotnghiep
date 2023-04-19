@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "Hash": "SQ3Fg384O13Vk1Xo6dCueE9nB5JO65/lHdz/NidCBYg=",
+  "Source": "CooperateApplication",
+  "BasePath": "_content/CooperateApplication",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CooperateApplication\\wwwroot",
+      "Source": "CooperateApplication",
+      "ContentRoot": "D:\\Doantotnghiep\\CooperateApplication\\wwwroot\\",
+      "BasePath": "_content/CooperateApplication",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Doantotnghiep\\CooperateApplication\\wwwroot\\Uploads\\Post\\post-image.jpg",
+      "SourceId": "CooperateApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Doantotnghiep\\CooperateApplication\\wwwroot\\",
+      "BasePath": "_content/CooperateApplication",
+      "RelativePath": "Uploads/Post/post-image.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Post\\post-image.jpg"
+    },
+    {
+      "Identity": "D:\\Doantotnghiep\\CooperateApplication\\wwwroot\\Uploads\\Post\\thong-bao.jpg",
+      "SourceId": "CooperateApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Doantotnghiep\\CooperateApplication\\wwwroot\\",
+      "BasePath": "_content/CooperateApplication",
+      "RelativePath": "Uploads/Post/thong-bao.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Post\\thong-bao.jpg"
+    },
+    {
+      "Identity": "D:\\Doantotnghiep\\CooperateApplication\\wwwroot\\Uploads\\Sile\\slide_a153465b-64e5-423d-8eb9-3651532d0dd0.jpg",
+      "SourceId": "CooperateApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Doantotnghiep\\CooperateApplication\\wwwroot\\",
+      "BasePath": "_content/CooperateApplication",
+      "RelativePath": "Uploads/Sile/slide_a153465b-64e5-423d-8eb9-3651532d0dd0.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Sile\\slide_a153465b-64e5-423d-8eb9-3651532d0dd0.jpg"
+    },
+    {
+      "Identity": "D:\\Doantotnghiep\\CooperateApplication\\wwwroot\\Uploads\\Sile\\slide_f716df9f-966e-415e-a43b-403ee8b06301.jpg",
+      "SourceId": "CooperateApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Doantotnghiep\\CooperateApplication\\wwwroot\\",
+      "BasePath": "_content/CooperateApplication",
+      "RelativePath": "Uploads/Sile/slide_f716df9f-966e-415e-a43b-403ee8b06301.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Sile\\slide_f716df9f-966e-415e-a43b-403ee8b06301.jpg"
+    }
+  ]
+}

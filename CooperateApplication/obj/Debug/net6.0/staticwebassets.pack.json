@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Doantotnghiep\\CooperateApplication\\wwwroot\\Uploads\\Post\\post-image.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Post\\post-image.jpg"
+    },
+    {
+      "Id": "D:\\Doantotnghiep\\CooperateApplication\\wwwroot\\Uploads\\Post\\thong-bao.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Post\\thong-bao.jpg"
+    },
+    {
+      "Id": "D:\\Doantotnghiep\\CooperateApplication\\wwwroot\\Uploads\\Sile\\slide_a153465b-64e5-423d-8eb9-3651532d0dd0.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Sile\\slide_a153465b-64e5-423d-8eb9-3651532d0dd0.jpg"
+    },
+    {
+      "Id": "D:\\Doantotnghiep\\CooperateApplication\\wwwroot\\Uploads\\Sile\\slide_f716df9f-966e-415e-a43b-403ee8b06301.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Sile\\slide_f716df9f-966e-415e-a43b-403ee8b06301.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.CooperateApplication.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.CooperateApplication.props",
+      "PackagePath": "build\\CooperateApplication.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.CooperateApplication.props",
+      "PackagePath": "buildMultiTargeting\\CooperateApplication.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.CooperateApplication.props",
+      "PackagePath": "buildTransitive\\CooperateApplication.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
