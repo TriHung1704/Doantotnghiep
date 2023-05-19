@@ -1,18 +1,14 @@
 <template>
   <div class="col-lg-3">
     <div class="box-card">
-      <div class="badge-new" v-if="postNew"><img class="img-new" :src="require('@/assets/' + 'icon-new.png')"/></div>
+      <div class="badge-new" v-if="postNew"><img class="img-new" :src="require('@/assets/' + 'icon-new.png')" /></div>
       <image-post :image="image" class="card-img-top"></image-post>
       <div class="card-body">
         <router-link :to="detailsLink">{{ title }}</router-link>
-        <div
-          class="card-text"
-          v-html="
-            description.length > 100
-              ? description.substring(0, 100) + ' ...'
-              : description
-          "
-        ></div>
+        <div class="card-text" v-html="description.length > 100
+            ? description.substring(0, 190) + ' ...'
+            : description
+          "></div>
       </div>
       <div class="footer-card">
         <div class="row">
@@ -30,14 +26,12 @@
             <v-icon size="12" icon="mdi-calendar"></v-icon>
           </div>
         </div>
-        <button-base link :to="detailsLink" class="btn-submit" col="col-12"
-          >Chi tiết</button-base
-        >
+        <button-base link :to="detailsLink" class="btn-submit" col="col-12">Chi tiết</button-base>
       </div>
     </div>
   </div>
 </template>
-  <script>
+<script>
 import moment from "moment";
 export default {
   props: ["post"],
@@ -61,8 +55,8 @@ export default {
       var type = this.post.type;
       return `enterprise/posts/${type}/detail/` + this.id;
     },
-    postNew(){
-      let date = moment(this.createAt).format("YYYY-MM-DD");
+    postNew() {
+      let date = moment(this.createAt).format("MM-DD-YYYY");
       console.log("curent date", date);
       console.log(moment.duration(moment(new Date()).diff(moment(date))).asDays());
       return moment.duration(moment(new Date()).diff(moment(date))).asDays() < 3;
@@ -70,7 +64,7 @@ export default {
   },
   methods: {
     getFormattedDate(date) {
-      return moment(date).format("YYYY-MM-DD");
+      return moment(date).format("DD-MM-YYYY");
     },
   },
 };
@@ -80,24 +74,29 @@ export default {
   display: flex;
   position: absolute;
   background: white;
-  border-radius:50%;
+  border-radius: 50%;
   margin: -8px -8px
 }
+
 .badge-new .img-new {
   height: 40px;
 }
+
 .card-text::v-deep h1 {
   font-size: 16px;
   text-align: justify;
 }
+
 .card-text::v-deep h2 {
   font-size: 14px;
   text-align: justify;
 }
+
 .card-text::v-deep h3 {
   font-size: 12px;
   text-align: justify;
 }
+
 .box-card {
   border-radius: 10px 0px;
   box-shadow: 0 2px 8px rgb(0 0 0 / 26%);
@@ -122,11 +121,11 @@ export default {
   word-wrap: break-word;
   font-weight: bold;
   cursor: pointer;
-  border-bottom: 2px dashed;
+  
 }
 
 .display-date {
-  font-size: 10px;
+  font-size: 12px;
   color: #3a3a3a;
   margin: 0px 0px;
   display: inline-block;
@@ -136,7 +135,7 @@ export default {
 .card-body .card-text {
   padding-top: 5px;
   height: 150px;
-  font-size: 14px;
+  font-size: 13px;
   text-align: justify;
 }
 
@@ -146,7 +145,7 @@ export default {
 }
 
 .box-company {
-  background-color: darkolivegreen;
+  background-color: #1F9AD6;
   color: aliceblue;
   font-size: 14px;
   text-align: center;

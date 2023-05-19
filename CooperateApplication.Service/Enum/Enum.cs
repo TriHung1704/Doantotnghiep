@@ -11,7 +11,8 @@ namespace CooperateApplication.Service.Enum
         public enum EmployeeType
         {
             EmployeeHRM = 2,
-            EmployeeMentor = 3
+            EmployeeMentor = 3,
+            EmployeeAdmin = 4
         }
         
         public enum PostTypeName

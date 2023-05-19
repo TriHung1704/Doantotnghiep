@@ -72,6 +72,7 @@ namespace CooperateApplication.Service.Services
             claims.Add(new Claim("FullName", user.FullName == null ? "No Name" : user.FullName));
             claims.Add(new Claim("UserName", user?.UserName));
             claims.Add(new Claim("EnterpriseId", user?.EnterpriseId.ToString()));
+            claims.Add(new Claim("Avatar", user?.Avatar));
 
             user.RoleModels.ToList().ForEach(role => claims.Add(new Claim("Roles", role.RoleName)));
 

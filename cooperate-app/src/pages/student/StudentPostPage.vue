@@ -22,23 +22,19 @@
               <td>{{ item.type == 1 ? "Tuyển dụng nhân viên" : "Tuyển thực tập sinh" }}</td>
               <td>
                 <v-btn v-if="item.isAccept" class="ma-2" color="primary">
-                  Accepted<v-icon end icon="mdi-checkbox-marked-circle"></v-icon>
+                  Đã Duyệt<v-icon end icon="mdi-checkbox-marked-circle"></v-icon>
                 </v-btn>
 
                 <v-btn v-else class="ma-2" color="red">
-                  Not Accepted<v-icon end icon="mdi-cancel"></v-icon>
+                  Chưa Được Duyệt<v-icon end icon="mdi-cancel"></v-icon>
                 </v-btn>
               </td>
               <td>
-                <button-base
-                  v-if="!item.isAccept"
-                  :class="'btn-delete'"
-                  @click="cancelApply(item)"
-                  >Hủy ứng tuyển
+                <button-base v-if="!item.isAccept" :class="'btn-delete'" @click="cancelApply(item)">Hủy ứng tuyển
                   <v-icon start icon="mdi-minus-circle"></v-icon></button-base>
-                  <v-badge v-else content="Kiểm tra email của bạn" color="error">
-                    <v-icon>mdi-bell-outline</v-icon>
-                  </v-badge>
+                <v-badge  v-else content="Kiểm tra email của bạn" color="error">
+                  <v-icon>mdi-bell-outline</v-icon>
+                </v-badge>
               </td>
             </tr>
           </tbody>
@@ -46,12 +42,8 @@
         <div class="text-center">
           <v-row justify="center">
             <v-col cols="6">
-              <v-pagination
-                v-model="page"
-                class="my-4"
-                :length="studentPosts.total"
-                @update:modelValue="pagination"
-              ></v-pagination>
+              <v-pagination v-model="page" class="my-4" :length="studentPosts.total"
+                @update:modelValue="pagination"></v-pagination>
             </v-col>
           </v-row>
         </div>
@@ -87,7 +79,7 @@ export default {
         this.$toast.error("Không thể tải danh sách!");
       }
     },
-    async cancelApply(event){
+    async cancelApply(event) {
       try {
         var result = await this.$store.dispatch(
           "student/cancelCV",

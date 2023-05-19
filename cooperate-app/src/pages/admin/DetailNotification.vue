@@ -15,35 +15,24 @@
             </p>
             <v-icon size="12" icon="mdi-calendar"></v-icon>
           </div>
-          <image-post
-            v-if="image != ''"
-            :image="image"
-            class="img-post"
-          ></image-post>
+          <image-post v-if="image != ''" :image="image" class="img-post"></image-post>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="right-content row">
           <span>Thông báo gần đây</span>
-          <noti-item-base :col="'col-sm-12'"
-            v-for="post in postsNoti.postList"
-            :key="post.id"
-            :post="post"
-          ></noti-item-base>
+          <noti-item-base :col="'col-sm-12'" v-for="post in postsNoti.postList" :key="post.id"
+            :post="post"></noti-item-base>
           <div class="text-center">
             <v-row justify="center">
               <v-col cols="6">
-                <v-pagination
-                  v-model="pageNoti"
-                  class="my-4"
-                  :length="postsNoti.total"
-                  @update:modelValue="paginationNoti"
-                ></v-pagination>
+                <v-pagination v-model="pageNoti" class="my-4" :length="postsNoti.total"
+                  @update:modelValue="paginationNoti"></v-pagination>
               </v-col>
             </v-row>
           </div>
         </div>
-        
+
       </div>
     </div>
   </section>
@@ -103,14 +92,14 @@ export default {
       }
     },
     getFormattedDate(date) {
-      return moment(date).format("YYYY-MM-DD");
+      return moment(date).format("DD-MM-YYYY");
     },
   },
   watch: {
     id(newId, oldId) {
-        if (newId != oldId) {
-            this.loadPost();
-        }
+      if (newId != oldId) {
+        this.loadPost();
+      }
     }
   }
 };
@@ -141,14 +130,22 @@ export default {
   padding: 5px;
 }
 
+.v-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  margin: -32px;
+}
+
 .left-content span {
-  background-color: darkolivegreen;
+  background-color: #1F9AD6;
   color: aliceblue;
   font-size: 16px;
   /* text-align: center; */
   padding: 5px 5px;
   box-shadow: 0 2px 8px rgb(0 0 0 / 26%);
 }
+
 .right-content span {
   background-color: rgb(214, 65, 65);
   color: aliceblue;
@@ -157,6 +154,7 @@ export default {
   padding: 5px 5px;
   box-shadow: 0 2px 8px rgb(0 0 0 / 26%);
 }
+
 .right-content {
   padding: 5px;
   /* position: relative; */
@@ -213,6 +211,7 @@ export default {
   font-size: 16px;
   font-weight: 500;
 }
+
 .company-info .company-des p,
 .company-info .company-des ol {
   word-wrap: break-word;
@@ -223,29 +222,37 @@ export default {
   text-decoration: none;
   color: inherit;
 }
+
 .box-company .comapny-name {
   font-weight: 700;
   font-size: 20px;
 }
+
 .box-description {
   font-size: 16px;
   text-align: justify;
+  margin-top: 15px;
 }
+
 .box-description::v-deep h1 {
   font-size: 16px;
   text-align: justify;
 }
+
 .box-description::v-deep h2 {
   font-size: 14px;
 }
+
 .box-description::v-deep h3 {
   font-size: 12px;
 }
+
 .box-description::v-deep ul,
 .box-description::v-deep p,
 .box-description::v-deep ol {
   font-size: 14px;
 }
+
 .majors-related div {
   margin: 5px;
   display: inline-flex;
@@ -258,7 +265,7 @@ export default {
 }
 
 .display-date {
-  font-size: 10px;
+  font-size: 12px;
   color: #3a3a3a;
   margin: 0px 0px;
   display: inline-block;

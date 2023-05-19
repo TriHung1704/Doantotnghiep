@@ -22,6 +22,7 @@ export default {
     localStorage.setItem("fullName", dataDecodeToken.FullName);
     localStorage.setItem("userId", dataDecodeToken.Id);
     localStorage.setItem("roles", dataDecodeToken.Roles);
+    localStorage.setItem("avatar", dataDecodeToken.Avatar);
 
     context.commit("setUser", {
       token: response.data.accessToken,
@@ -29,6 +30,7 @@ export default {
       userId: dataDecodeToken.Id,
       fullName: dataDecodeToken.FullName,
       roles: dataDecodeToken.Roles,
+      avatar: dataDecodeToken.Avatar,
     });
   },
   tryLogin(context) {
@@ -37,6 +39,7 @@ export default {
     const refreshToken = localStorage.getItem("refreshToken");
     const fullName = localStorage.getItem("fullName");
     const roles = localStorage.getItem("roles");
+    const avatar = localStorage.getItem("avatar");
 
     if (token && userId) {
       context.commit("setUser", {
@@ -45,6 +48,7 @@ export default {
         userId: userId,
         fullName: fullName,
         roles: roles,
+        avatar: avatar
       });
     }
   },
@@ -54,6 +58,7 @@ export default {
     localStorage.removeItem("userId");
     localStorage.removeItem("fullName");
     localStorage.removeItem("roles");
+    localStorage.removeItem("avatar");
 
     context.commit("setUser", {
       token: null,
@@ -61,6 +66,7 @@ export default {
       userId: null,
       fullName: "",
       roles: null,
+      avatar: null
     });
   },
   refreshToken(context, payload) {
@@ -72,6 +78,7 @@ export default {
       userId: localStorage.getItem("userId"),
       fullName: localStorage.getItem("fullName"),
       roles: localStorage.getItem("roles"),
+      avatar: localStorage.getItem("avatar")
     });
   }
 };

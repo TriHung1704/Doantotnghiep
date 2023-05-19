@@ -47,8 +47,13 @@ namespace CooperateApplication.Controllers
                     || roles.Select(x => x.RoleName).Contains("EmployeeMentor")
                     || roles.Select(x => x.RoleName).Contains("EmployeeAdmin"))
                 {
-                    var enterprise = await _enterpriseEmployeeService.GetEmployeeByUserId(user.Id);
-                    user.EnterpriseId = enterprise.EnterpriseId;
+                    var enterpriseEmployee = await _enterpriseEmployeeService.GetEmployeeByUserId(user.Id);
+                    user.EnterpriseId = enterpriseEmployee.EnterpriseId;
+                    var enterprise = await _enterpriseEmployeeService.GetEnterprisesAsync(enterpriseEmployee.EnterpriseId);
+                    if (!enterprise.Status)
+                    {
+                        return BadRequest();
+                    }
                 }
                 var responseToken = await _loginService.LoginCreateToken(user);
                 return Ok(responseToken);

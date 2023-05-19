@@ -63,7 +63,7 @@ export default {
   },
   methods: {
     getFormattedDate(date) {
-      return moment(date).format("YYYY-MM-DD")
+      return moment(date).format("DD-MM-YYYY")
     },
     pagination() {
       this.loadSenimarAttend();

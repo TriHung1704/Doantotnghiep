@@ -1,6 +1,7 @@
 ﻿using CooperateApplication.Repositories.Entities;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,6 +37,18 @@ namespace CooperateApplication.Service.Model
     {
         public EmployeeType EmployeeType { get; set; }
     }
+    
+    public class EnterpriseRequest : UserModel
+    {
+        public string EnterpriseName { get; set; }
+        public string CorporateTaxCode { get; set; }
+        public string Director { get; set; }
+        public string EnterpriseEmail { get; set; }
+        public string Website { get; set; }
+        public string EnterprisePhone { get; set; }
+        public string Description { get; set; }
+        public string ImageLogo { get; set; }
+    }
     public static class UserModelEmm
     {
         public static UserModel ToModel(this User user)
@@ -48,8 +61,9 @@ namespace CooperateApplication.Service.Model
             userModel.Email = user.Email;
             userModel.Phone = user.Phone;
             userModel.Birthday = user.Birthday;
-            userModel.Avatar = user.Avatar;
+            userModel.Avatar = user.Avatar == null ? "Uploads/User/1.jpg" : user.Avatar;
             userModel.ProvinceAddress = user.ProvinceAddress;
+            userModel.DetailAddress = user.DetailAddress;
             userModel.RefreshToken = user.RefreshToken;
             userModel.RefreshTokenExpiryTime = user.RefreshTokenExpiryTime;
             userModel.IsDeleted = user.IsDeleted;

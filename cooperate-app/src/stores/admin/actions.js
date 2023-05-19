@@ -90,4 +90,47 @@ export default {
     const response = await axios.get(`posts/confirm-post-enterprise?isConfirm=${payload.isConfirm}&id=${payload.id}`);
     return response.data;
   },
+  async registerEnterprise(_, payload) {
+    let formData = new FormData();
+    debugger
+    if (payload.fileUpload != "") {
+      formData.append("file", payload.fileUpload);
+      const response = await axios.post("enterprise/upload-file", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      payload.enterpriseData.imageLogo = response.data;
+    }
+    debugger
+    const responseData = await axios.post("enterprise/register", payload.enterpriseData);
+    return responseData.data;
+  },
+  async updateEnterprise(_, payload) {
+    let formData = new FormData();
+    if (payload.fileUpload != "") {
+      formData.append("file", payload.fileUpload);
+      const response = await axios.post("enterprise/upload-file", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      payload.enterpriseData.imageLogo = response.data;
+    }
+    const responseData = await axios.put("enterprise/update", payload.enterpriseData);
+    return responseData.data;
+  },
+  async loadEnterprises(_, page) {
+    const response = await axios.get(`enterprise/list-enterprise?page=${page}`);
+    return response.data;
+  },
+  async loadEnterprise(_, id) {
+    const response = await axios.get(`enterprise?id=${id}`);
+    return response.data;
+  },
+  async deleteEnterprise(_,payload) {
+    debugger
+    const response = await axios.delete("enterprise/lock-enterprise?isLock="+payload.isLock +"&enterpriseId="+ payload.enterpriseId);
+    return response.data;
+  },
 };

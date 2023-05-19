@@ -1921,11 +1921,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Doantotnghiep\\CooperateApplication.Repositories\\CooperateApplication.Repositories.csproj",
+      "projectUniqueName": "E:\\CooperateApp\\CooperateApplication.Repositories\\CooperateApplication.Repositories.csproj",
       "projectName": "CooperateApplication.Repositories",
-      "projectPath": "D:\\Doantotnghiep\\CooperateApplication.Repositories\\CooperateApplication.Repositories.csproj",
+      "projectPath": "E:\\CooperateApp\\CooperateApplication.Repositories\\CooperateApplication.Repositories.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "D:\\Doantotnghiep\\CooperateApplication.Repositories\\obj\\",
+      "outputPath": "E:\\CooperateApp\\CooperateApplication.Repositories\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

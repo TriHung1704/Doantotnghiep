@@ -7,5 +7,6 @@ namespace CooperateApplication.Service.Services
     public interface IUserService : IBaseService<User>
     {
         Task<bool> CreateUser(string fileUrl);
+        Task<UserModel> GetUser();
     }
 }

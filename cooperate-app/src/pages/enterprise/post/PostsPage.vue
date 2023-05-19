@@ -10,21 +10,19 @@
                 <div class="col-sm-6">
                     <button-base :col="'col-12'" :class="'btn-submit'" link :to="registerPostLink">Tạo bài mới</button-base>
                 </div>
-                <div class="col-sm-6">
-                    <button-base :col="'col-12'" link :to="'/'">Quay trở lại trang chủ</button-base>
-                </div>
+
             </div>
             <div>
                 <item-base v-for="post in posts.postList" :key="post.id" :id="post.id" :post="post"></item-base>
             </div>
             <div class="text-center">
-          <v-row justify="center">
-            <v-col cols="6">
-              <v-pagination v-model="page" class="my-4" :length="posts.total"
-                @update:modelValue="paginationPosts"></v-pagination>
-            </v-col>
-          </v-row>
-        </div>
+                <v-row justify="center">
+                    <v-col cols="6">
+                        <v-pagination v-model="page" class="my-4" :length="posts.total"
+                            @update:modelValue="paginationPosts"></v-pagination>
+                    </v-col>
+                </v-row>
+            </div>
         </div>
     </div>
 </template>
@@ -37,12 +35,12 @@ export default {
         message: ""
     }),
     methods: {
-        paginationPosts(){
+        paginationPosts() {
             this.loadPosts();
         },
         async loadPosts() {
             try {
-                switch(this.type){
+                switch (this.type) {
                     case "recruitment":
                         this.message = "bài tuyển dụng";
                         break;
@@ -55,8 +53,8 @@ export default {
                 }
                 let payload = {
                     type: this.type,
-                    page : this.page,
-                    limit: 20
+                    page: this.page,
+                    limit: 10
                 }
                 this.posts = await this.$store.dispatch("post/loadPostByEmployee", payload);
                 if (this.posts.length == 0) {
@@ -97,6 +95,12 @@ export default {
     display: inline-block;
     margin-bottom: 0;
 }
+
+.btn-submit {
+    margin-top: 5px;
+    width: initial;
+}
+
 .box-title .btn-submit {
     margin: 4px;
 }

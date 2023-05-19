@@ -11,6 +11,9 @@ export default{
   fullName(state){
     return state.fullName;
   },
+  avatar(state){
+    return state.avatar;
+  },
   isActiveLoader(state){
     return state.isActiveLoader;
   },

@@ -6,10 +6,10 @@
         <v-main>
             <div class="content">
                 <router-view v-slot="slotProps">
-                <transition name="route" mode="out-in">
-                    <component :is="slotProps.Component"></component>
-                </transition>
-            </router-view>
+                    <transition name="route" mode="out-in">
+                        <component :is="slotProps.Component"></component>
+                    </transition>
+                </router-view>
             </div>
         </v-main>
     </div>
@@ -33,16 +33,17 @@ export default {
 }
 </script>
 <style scoped>
-
 .main {
-  align-items: center;
-  justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Arial", sans-serif;
 }
 
-.main{
+.main {
     margin: auto;
     width: 92%;
 }
+
 .route-enter-from {
     opacity: 0;
     transform: translateY(-5px);

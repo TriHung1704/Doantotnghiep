@@ -13,10 +13,12 @@
       <li v-else style="float: right; cursor: pointer">
         <v-menu location="bottom">
           <template v-slot:activator="{ props }">
-            <a v-bind="props"><v-icon icon="mdi-account" :title="fullName"></v-icon>{{ fullName }}</a>
+            <a v-bind="props"><img class="img-avatar" v-if="!!avatar" :src="avatar" />{{
+              fullName
+            }}</a>
           </template>
           <v-list>
-            <v-list-item prepend-icon="mdi-account" title="Trang cá nhân">
+            <v-list-item @click="profile()" prepend-icon="mdi-account" title="Trang cá nhân">
             </v-list-item>
             <!-- Nhân viên tuyển dụng -->
             <access-roles-base :accessRoles="['EmployeeHRM']">
@@ -59,6 +61,10 @@
                 title="Quản lý tài khoản sinh viên"></v-list-item>
             </access-roles-base>
             <access-roles-base :accessRoles="['Administrator']">
+              <v-list-item @click="enterprise()" prepend-icon="mdi-folder-open"
+                title="Quản lý tài khoản doanh nghiệp"></v-list-item>
+            </access-roles-base>
+            <access-roles-base :accessRoles="['Administrator']">
               <v-list-item @click="enterprisePost()" prepend-icon="mdi-folder-open"
                 title="Quản lý bài đăng doanh nghiệp"></v-list-item>
             </access-roles-base>
@@ -96,9 +102,9 @@
 </template>
 
 <script>
+import urlApi from "@/interceptors/url";
 export default {
-  components: {
-  },
+  components: {},
   data() {
     return {
       isShowModal: false,
@@ -121,9 +127,12 @@ export default {
     fullName() {
       return this.$store.getters.fullName;
     },
+    avatar() {
+      return urlApi + this.$store.getters.avatar;
+    },
     isLoggedIn() {
       return this.$store.getters.isAuthenticated;
-    }
+    },
   },
   methods: {
     async loadSlide() {
@@ -169,6 +178,9 @@ export default {
     enterprisePost() {
       this.$router.replace("/admin/enterprise-post");
     },
+    profile() {
+      this.$router.replace("/profile");
+    },
     openModal() {
       this.isShowModal = true;
     },
@@ -188,7 +200,7 @@ export default {
       };
       try {
         await this.$store.dispatch("login", actionPayload);
-        // this.message = "Đăng nhập thành công!";      
+        // this.message = "Đăng nhập thành công!";
         // this.closeModal();
         this.$router.go();
         // this.$toast.success(this.message);
@@ -239,6 +251,7 @@ ul.sidenav {
   position: fixed;
   width: -webkit-fill-available;
   z-index: 100;
+  font-family: "Arial", sans-serif;
 }
 
 ul.sidenav li {
@@ -279,6 +292,8 @@ ul.menunav {
   position: fixed;
   height: 100%;
   overflow: auto;
+  font-family: "Arial", sans-serif;
+
 }
 
 ul.menunav li a {
@@ -304,7 +319,7 @@ div.content {
   height: 1000px;
 }
 
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 3000px) {
   ul.menunav {
     width: 92%;
     height: auto;
@@ -343,5 +358,13 @@ h1 {
 h1 a {
   color: white;
   margin: 0;
+}
+
+.img-avatar {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: solid 1px;
+  margin-right: 5px;
 }
 </style>

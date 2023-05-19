@@ -41,5 +41,9 @@ export default {
       });
       return response.data;
     }
-  }
+  },
+  async loadUser() {
+    const response = await axios.get("home/profile");
+    return response.data;
+  },
 };

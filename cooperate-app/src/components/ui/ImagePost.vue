@@ -1,5 +1,5 @@
 <template>
-  <img :src="imageSrc" class="card-img-top" alt="hình ảnh bài đăng" />
+  <img :src="imageSrc" class="card-img-top"/>
 </template>
 <script>
 import urlApi from "@/interceptors/url";

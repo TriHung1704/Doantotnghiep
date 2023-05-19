@@ -5,20 +5,13 @@
         <p>Trang chủ / Tin tức mới nhất</p>
       </div>
       <div class="row">
-        <noti-item-base :class="'col-lg-4'"
-          v-for="post in postsNoti.postList"
-          :key="post.id"
-          :post="post"
-        ></noti-item-base>
+        <noti-item-base :class="'col-lg-4'" v-for="post in postsNoti.postList" :key="post.id"
+          :post="post"></noti-item-base>
         <div class="text-center">
           <v-row justify="center">
             <v-col cols="6">
-              <v-pagination
-                v-model="pageNoti"
-                class="my-4"
-                :length="postsNoti.total"
-                @update:modelValue="paginationNoti"
-              ></v-pagination>
+              <v-pagination v-model="pageNoti" class="my-4" :length="postsNoti.total"
+                @update:modelValue="paginationNoti"></v-pagination>
             </v-col>
           </v-row>
         </div>
@@ -27,43 +20,27 @@
         <p>Trang chủ / Tuyển dụng</p>
       </div>
       <div class="row">
-        <card-base
-          v-for="post in postsRecruitment.postList"
-          :key="post.id"
-          :post="post"
-        ></card-base>
+        <card-base :class="'col-lg-4'" v-for="post in postsRecruitment.postList" :key="post.id" :post="post"></card-base>
         <div class="text-center">
           <v-row justify="center">
             <v-col cols="6">
-              <v-pagination
-                v-model="pageRecruitment"
-                class="my-4"
-                :length="postsRecruitment.total"
-                @update:modelValue="paginationRecruitment"
-              ></v-pagination>
+              <v-pagination v-model="pageRecruitment" class="my-4" :length="postsRecruitment.total"
+                @update:modelValue="paginationRecruitment"></v-pagination>
             </v-col>
           </v-row>
         </div>
       </div>
     </div>
     <div class="box-title">
-      <p>Trang chủ / Học kì doanh nghiệp</p>
+      <p>Trang chủ / Thực tập sinh</p>
     </div>
     <div class="row">
-      <card-base
-        v-for="post in postsInternship.postList"
-        :key="post.id"
-        :post="post"
-      ></card-base>
+      <card-base :class="'col-lg-4'" v-for="post in postsInternship.postList" :key="post.id" :post="post"></card-base>
       <div class="text-center">
         <v-row justify="center">
           <v-col cols="6">
-            <v-pagination
-              v-model="pageInternship"
-              class="my-4"
-              :length="postsInternship.total"
-              @update:modelValue="paginationInternship"
-            ></v-pagination>
+            <v-pagination v-model="pageInternship" class="my-4" :length="postsInternship.total"
+              @update:modelValue="paginationInternship"></v-pagination>
           </v-col>
         </v-row>
       </div>
@@ -73,20 +50,12 @@
       <p>Trang chủ / Hội thảo công nghệ</p>
     </div>
     <div class="row">
-      <card-base
-        v-for="post in postsSeminar.postList"
-        :key="post.id"
-        :post="post"
-      ></card-base>
+      <card-base v-for="post in postsSeminar.postList" :key="post.id" :post="post"></card-base>
       <div class="text-center">
         <v-row justify="center">
           <v-col cols="6">
-            <v-pagination
-              v-model="pageSeminar"
-              class="my-4"
-              :length="postsSeminar.total"
-              @update:modelValue="paginationSeminar"
-            ></v-pagination>
+            <v-pagination v-model="pageSeminar" class="my-4" :length="postsSeminar.total"
+              @update:modelValue="paginationSeminar"></v-pagination>
           </v-col>
         </v-row>
       </div>
@@ -210,4 +179,21 @@ export default {
 .box-title p {
   padding: 12px 10px;
 }
+
+.v-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  margin: -32px;
+  
+  
+}
+.row {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 10px;
+    margin-top: 10px;
+    text-align: left;
+    }
 </style>

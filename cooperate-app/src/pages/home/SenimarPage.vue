@@ -65,7 +65,7 @@
       </div>
     </div>
     <div class="row">
-      <card-base
+      <card-base :class="'col-lg-4'"
         v-for="post in postsSeminar.postList"
         :key="post.id"
         :post="post"

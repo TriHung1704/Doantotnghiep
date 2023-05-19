@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "I3yprQOH4v8QReCXb2K3MfiQ5mxxXAXnRkUZr98a0ORf04t13O/AvyqIl+VikXCMM0J8apbYKL2OKQ+PRyF5vA==",
+  "dgSpecHash": "2noOLffHEh3vP+39sbrq2NK/mMjzY//5/OX03lv3TeX6bUiQ0khe2htpKl24GPVZJ4IsoDwHbl8SHklHQnMXWg==",
   "success": true,
-  "projectFilePath": "D:\\Doantotnghiep\\CooperateApplication.Repositories\\CooperateApplication.Repositories.csproj",
+  "projectFilePath": "E:\\CooperateApp\\CooperateApplication.Repositories\\CooperateApplication.Repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",

@@ -91,7 +91,7 @@ export default {
       }
     },
     getFormattedDate(date) {
-      return moment(date).format("YYYY-MM-DD");
+      return moment(date).format("DD-MM-YYYY");
     },
   },
 };
@@ -100,6 +100,7 @@ export default {
 .box-description {
   font-size: 16px;
   text-align: justify;
+  margin-top: 15px;
 }
 .box-description::v-deep h1 {
   font-size: 16px;
@@ -157,12 +158,11 @@ export default {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  border-bottom: 2px dashed;
   color: aliceblue;
 }
 
 .display-date {
-  font-size: 10px;
+  font-size: 12px;
   color: #3a3a3a;
   margin: 0px 0px;
   display: inline-block;
@@ -180,7 +180,7 @@ export default {
 }
 
 .box-company {
-  background-color: darkolivegreen;
+  background-color: #1F9AD6;
   color: aliceblue;
   font-size: 14px;
   padding: 5px 0px;

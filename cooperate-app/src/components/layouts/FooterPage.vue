@@ -9,9 +9,27 @@
       </li>
     </ul>
     <div class="row m-2 text-white box-footer">
-      <div class="col-sm-4">Giới thiệu</div>
-      <div class="col-sm-4">Liên hệ với chúng tôi</div>
-      <div class="col-sm-4">Thuộc quyền sở hữu của ...</div>
+      <div class="css-g4muhz">
+        <p class="css-11z4vix">Giới thiệu</p>
+        <p class="css-128nlh6"><a href="/home">Trang chủ</a></p>
+        <p class="css-128nlh6"><a href=" /notification">Tin tức mới nhất</a></p>
+        <p class="css-128nlh6"><a href="/recruitment">Tuyển dụng</a></p>
+        <p class="css-128nlh6"><a href=" /internship">Thực tập sinh</a></p>
+        <p class="css-128nlh6"><a href=" /senimar">Hội thảo công nghệ</a></p>
+      </div>
+      <div class="css-g4muhz">
+        <p class="css-11z4vix">Liên hệ với chúng tôi</p>
+        <p class="css-128nlh6">54 Hải Hồ - Thanh Bình - Hải Châu - Đà Nẵng. ĐT: 037325xxxx</p>
+        <img class="image-preview" src="https://i.imgur.com/wHTlYgD.png">
+
+
+      </div>
+      <div class="css-g4muhz">
+        <p class="css-11z4vix">Thuộc quyền sở hữu</p>
+        <p class="css-128nlh6">Thiết kế và sở hữu thuộc : <a href="https://www.tiktok.com/@duongtrihung01">Dương Hùng</a>
+        </p>
+      </div>
+
     </div>
   </footer>
 </template>
@@ -21,25 +39,29 @@ export default {
   components: {},
   data() {
     return {
-      
+
     };
   },
 };
 </script>
 <style scoped>
-.box-footer{
+.box-footer {
   border-top: #bbb 1px solid;
   padding-top: 5px;
+  font-family: "Arial", sans-serif;
+
 }
-footer{
+
+footer {
   margin-top: 10px;
-  height: 200px;
+  height: 350px;
   background-color: #222831;
   /* position: fixed;
   width: -webkit-fill-available;
   z-index: 100;
   bottom: 0; */
 }
+
 ul.sidenav {
   list-style-type: none;
   list-style-type: none;
@@ -47,6 +69,8 @@ ul.sidenav {
   padding: 5px;
   overflow: hidden;
   width: -webkit-fill-available;
+  font-family: "Arial", sans-serif;
+
 }
 
 ul.sidenav li {
@@ -94,4 +118,36 @@ ul.sidenav li a i {
   }
 }
 
+.css-g4muhz {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 33%;
+
+}
+
+.css-11z4vix {
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.css-128nlh6 {
+  font-size: 14px;
+}
+
+a {
+  color: azure;
+}
+
+img {
+  width: 400px;
+  height: 150px;
+  margin: 10px;
+  padding: 10px;
+  display: block;
+  margin-left: inherit;
+}
 </style>

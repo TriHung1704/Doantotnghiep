@@ -7,7 +7,7 @@
 
     <v-form v-model="form" @submit.prevent="onSubmit">
       <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-6">
           <v-text-field
             v-model="fullName"
             :readonly="loading"
@@ -19,20 +19,8 @@
             autocomplete="null"
           ></v-text-field>
         </div>
-        <p class="text-red">[Mật khẩu mặc định là 1234]</p>
-        <div class="col-sm-12">
-          <v-text-field
-            v-model="userName"
-            :readonly="loading"
-            :rules="[required]"
-            clearable
-            label="Tài khoản"
-            prepend-inner-icon="mdi-pencil"
-            variant="outlined"
-            autocomplete="null"
-          ></v-text-field>
-        </div>
-        <div class="col-sm-12">
+
+        <div class="col-sm-6">
           <v-text-field
             v-model="email"
             :readonly="loading"
@@ -44,36 +32,118 @@
             autocomplete="null"
           ></v-text-field>
         </div>
-        <div class="col-sm-3 d-inline-block">
+        <p class="text-red">[*Mật khẩu mặc định là 1234]</p>
+        <div class="col-sm-6">
           <v-text-field
-            v-model="birthDay"
+            v-model="userName"
             :readonly="loading"
             :rules="[required]"
             clearable
+            label="Tài khoản"
+            prepend-inner-icon="mdi-pencil"
+            variant="outlined"
+            autocomplete="null"
+          ></v-text-field>
+        </div>
+        <div class="col-sm-6">
+          <v-radio-group inline v-model="idGenderSelected">
+            <div
+              class="col-sm-12 d-flex justify-center border border-secondary rounded p-2"
+            >
+              <span class="title-gender">Giới tính</span>
+              <v-radio
+                label="Nữ"
+                color="red"
+                :key="false"
+                :value="false"
+              ></v-radio>
+              <v-radio
+                label="Nam"
+                color="red"
+                :key="true"
+                :value="true"
+              ></v-radio>
+            </div>
+          </v-radio-group>
+        </div>
+        <div class="col-sm-4 d-inline-block">
+          <v-text-field
+            v-model="birthDay"
+            :readonly="loading"
+            :rules="[required, requiredDate]"
+            clearable
             label="Ngày sinh"
-            prepend-inner-icon="mdi-event"
             variant="outlined"
             type="date"
           ></v-text-field>
         </div>
-        <div class="col-sm-9 d-inline-block">
+        <div class="col-sm-4 d-inline-block">
           <v-radio-group v-model="idSelected">
-            <div class="col-sm-12 d-flex justify-center border border-secondary rounded p-2">
-                <v-radio
-                  label="Nhân viên tuyển dụng"
-                  color="red"
-                  :key="2"
-                  :value="2"
-                ></v-radio>
-                <v-radio
-                  label="Nhân viên hướng dẫn"
-                  color="red"
-                  :key="3"
-                  :value="3"
-                ></v-radio>
-              </div>
+            <div
+              class="col-sm-12 d-flex justify-center border border-secondary rounded p-2"
+            >
+              <v-radio
+                label="Nhân viên tuyển dụng"
+                color="red"
+                :key="2"
+                :value="2"
+              ></v-radio>
+            </div>
           </v-radio-group>
         </div>
+        <div class="col-sm-4">
+          <v-text-field
+            class="phone-number"
+            v-model="phone"
+            :readonly="loading"
+            :rules="[required]"
+            clearable
+            label="Số điện thoại"
+            variant="outlined"
+            type="number"
+          ></v-text-field>
+        </div>
+        <div class="col-sm-4">
+          <v-text-field
+            v-model="provinceAddress"
+            :readonly="loading"
+            :rules="[required]"
+            clearable
+            label="Tỉnh/Thành phố"
+            variant="outlined"
+          ></v-text-field>
+        </div>
+        <div class="col-sm-8">
+          <v-text-field
+            v-model="detailAddress"
+            :readonly="loading"
+            :rules="[required]"
+            clearable
+            label="Địa chỉ cụ thể"
+            variant="outlined"
+          ></v-text-field>
+        </div>
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-8">
+              <v-file-input
+                accept="image/*"
+                id="file"
+                ref="file"
+                @change="handleFileUpload()"
+                label="Hình ảnh"
+                variant="outlined"
+                dense
+              ></v-file-input>
+            </div>
+            <div class="col-sm-4">
+              <div class="text-center">
+                <img class="image-preview" :src="imageSrc" />
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="col-sm-12 mt-10">
           <v-btn
             :disabled="!form"
@@ -92,6 +162,7 @@
   </section>
 </template>
 <script>
+import moment from "moment";
 export default {
   props: ["id"],
   data() {
@@ -100,7 +171,13 @@ export default {
       fullName: "",
       email: "",
       birthDay: null,
-      idSelected: null,
+      idSelected: 2,
+      idGenderSelected: null,
+      phone: "",
+      detailAddress: "",
+      provinceAddress: "",
+      imageSrc: "",
+      file: "",
       form: false,
       rules: {
         email: (value) => {
@@ -111,14 +188,11 @@ export default {
       },
     };
   },
-  async created() {
-    // await this.loadMajors();
-    // if (this.id != null) {
-    //   await this.loadPost();
-    // }
-  },
   methods: {
-    
+    handleFileUpload() {
+      this.file = this.$refs.file.files[0];
+      this.imageSrc = window.URL.createObjectURL(this.file);
+    },
     async onSubmit() {
       let postData = {
         userName: this.userName,
@@ -126,23 +200,30 @@ export default {
         email: this.email,
         birthDay: this.birthDay,
         employeeType: this.idSelected,
+        gender: this.idGenderSelected,
+        phone: this.phone,
+        detailAddress: this.detailAddress,
+        provinceAddress: this.provinceAddress,
+      };
+      let payload = {
+        employeeData: postData,
+        fileUpload: this.file,
       };
       try {
         if (this.id == null) {
           let responData = await this.$store.dispatch(
             "employee/postEmployees",
-            postData
+            payload
           );
           if (responData == true) {
             this.$toast.success(
               `Nhân viên ${this.fullName} được tạo thành công.`
             );
+            this.$router.replace("/enterprise/employee");
           } else {
-            this.$toast.warning(
-              `Nhân viên ${this.fullName} không được tạo thành công.`
-            );
+            this.$toast.warning(`Tài khoản ${this.userName} đã bị trùng.`);
           }
-        } 
+        }
       } catch (err) {
         this.$toast.error(err.mesage || "Đã xảy ra lỗi");
         this.$router.replace("/enterprise/employee");
@@ -151,9 +232,12 @@ export default {
     required(v) {
       return !!v || "Không được để trống";
     },
-    // emailRules(v) {
-    //   return !!v || /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'Email phải hợp lệ'
-    // }
+    requiredDate(v) {
+      let diffTime = moment(new Date()) - moment(v);
+      let totalDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+      console.log(Math.floor(totalDays / 365.25));
+      return Math.floor(totalDays / 365.25) >= 18 || "Tuổi phải lớn hơn 18!";
+    },
   },
 };
 </script>
@@ -162,7 +246,7 @@ export default {
   height: 50px;
   margin-top: 10px;
   border: 1px solid;
-  background: #4caf50;
+  background: #222831;
   color: white;
 }
 
@@ -177,5 +261,20 @@ export default {
 
 .ql-container {
   min-height: 150px;
+}
+
+.title-gender {
+  display: flex;
+  align-items: center;
+}
+
+.phone-number >>> input[type="number"] {
+  -moz-appearance: textfield;
+}
+.phone-number >>> input::-webkit-outer-spin-button,
+.phone-number >>> input::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 </style>

@@ -12,6 +12,8 @@ import StudentSenimar from "./pages/enterprise/post/StudentSenimar.vue";
 import DetailPost from "./pages/enterprise/post/DetailPost.vue";
 import BannerPage from "./pages/admin/BannerPage.vue";
 import StudentPage from "./pages/admin/StudentPage.vue";
+import RegisterEnterprise from "./pages/admin/RegisterEnterprise.vue";
+import EnterprisesPage from "./pages/admin/EnterprisesPage.vue";
 import NotificationPage from "./pages/admin/NotificationPage.vue";
 import RegisterNotification from "./pages/admin/RegisterNotification.vue";
 import DetailNotification from "./pages/admin/DetailNotification.vue";
@@ -20,6 +22,7 @@ import RegisterEmployee from "./pages/enterprise/employee/RegisterEmployee.vue";
 import CVPage from "./pages/student/CVPage.vue";
 import StudentPostPage from "./pages/student/StudentPostPage.vue";
 import SenimarAttendPage from "./pages/student/SenimarAttendPage.vue";
+import ProfilePage from "./pages/home/ProfilePage.vue";
 import store from "./stores/index.js";
 
 const RoleAccess = Object.freeze({
@@ -44,6 +47,19 @@ const router = createRouter({
     },
     { path: "/admin/student",
       component: StudentPage,
+      meta: { requiresAuth: true, roles: [RoleAccess.Administrator] },
+    },
+    { path: "/admin/enterprise",
+      component: EnterprisesPage,
+      meta: { requiresAuth: true, roles: [RoleAccess.Administrator] },
+    },
+    { path: "/admin/enterprise/register",
+      component: RegisterEnterprise,
+      meta: { requiresAuth: true, roles: [RoleAccess.Administrator] },
+    },
+    { path: "/admin/enterprise/edit/:id",
+      component: RegisterEnterprise,
+      props: true,
       meta: { requiresAuth: true, roles: [RoleAccess.Administrator] },
     },
     { path: "/admin/post/notification",
@@ -121,6 +137,10 @@ const router = createRouter({
     { path: "/senimar-attend",
       component: SenimarAttendPage,
       meta: { requiresAuth: true, roles: [RoleAccess.Student] },
+    },
+    { path: "/profile",
+      component: ProfilePage,
+      meta: { requiresAuth: true},
     },
     { path: "/:notFound(.*)", redirect: "/home" },
   ],

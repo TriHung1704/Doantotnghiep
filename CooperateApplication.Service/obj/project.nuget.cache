@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zZBLEA55YDkr5qNCuG33Iyy4+UumVK0beiL3Uwg9oFxS2/21PNmL2zwm66yYLSinfuIbshOa0ioI/lIxOMP1bA==",
+  "dgSpecHash": "JFpXVhRYwHYYwCCL4ncQKwf67VVK85lHCVLE9ZgpCOzqS5GgrEzsmiexh6FqnRacfB/hO9L/Ehdsn3wOWGhlTA==",
   "success": true,
-  "projectFilePath": "D:\\Doantotnghiep\\CooperateApplication.Service\\CooperateApplication.Service.csproj",
+  "projectFilePath": "E:\\CooperateApp\\CooperateApplication.Service\\CooperateApplication.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\bitmiracle.libtiff.net\\2.4.649\\bitmiracle.libtiff.net.2.4.649.nupkg.sha512",

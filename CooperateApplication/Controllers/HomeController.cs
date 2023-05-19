@@ -130,5 +130,13 @@ namespace CooperateApplication.Controllers
             var result = await _notificationService.UpdateNotiPostsAsync(notificationModel);
             return Ok(result);
         }
+
+        [Route("profile")]
+        [HttpGet]
+        public async Task<IActionResult> Profile()
+        {
+            var user = await _userService.GetUser();
+            return Ok(user);
+        }
     }
 }

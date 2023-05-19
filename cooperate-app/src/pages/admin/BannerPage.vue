@@ -59,7 +59,7 @@ export default {
           this.idSelected = selected != null ? selected[0].id : null;
         }
       } catch (error) {
-        this.$toast.error("Không thể tải banner!");
+        // this.$toast.error("Không thể tải banner!");
       }
     },
     handleFileUpload() {
@@ -100,14 +100,14 @@ export default {
 
 .item-image-banner {
   max-height: 150px;
-  width: auto;
+  max-width: 100%;
 }
 
 .box-title {
   height: 50px;
   margin-top: 10px;
   border: 1px solid;
-  background: #4caf50;
+  background: #222831;
   color: white;
 }
 

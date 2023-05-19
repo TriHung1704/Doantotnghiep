@@ -8,118 +8,127 @@
       <p v-if="this.type == 'seminar'">Trang chủ / Tạo bài hội thảo</p>
     </div>
     <br />
-
     <v-form v-model="form" @submit.prevent="onSubmit">
       <div class="row">
-        <div class="col-sm-12">
-          <v-text-field
-            v-model="title"
-            :readonly="loading"
-            :rules="[required]"
-            clearable
-            label="Tiêu đề bài đăng"
-            prepend-inner-icon="mdi-pencil"
-            variant="outlined"
-            autocomplete="null"
-          ></v-text-field>
-        </div>
-        <div class="col-sm-12">
-          <quill-editor
-            v-model:content="description"
-            contentType="html"
-            :rules="[required]"
-            theme="snow"
-          ></quill-editor>
-        </div>
-        <div class="col-sm-12 mt-10 pt-4">
-          <div class="col-sm-3 d-inline-block">
-            <v-text-field
-              v-model="quantity"
-              :readonly="loading"
-              :rules="[required,requiredNumber]"
-              clearable
-              label="Số lượng tuyển dụng"
-              prepend-inner-icon="mdi-widgets"
-              variant="outlined"
-              autocomplete="null"
-              type="number"
-            ></v-text-field>
-          </div>
-          <div class="col-sm-3 d-inline-block">
-            <v-text-field
-              v-model="expireTime"
-              :readonly="loading"
-              :rules="[required,requiredDate]"
-              clearable
-              label="Ngày hết hạn ứng tuyển"
-              prepend-inner-icon="mdi-event"
-              variant="outlined"
-              type="date"
-            ></v-text-field>
-          </div>
-          <div class="col-sm-6 d-inline-block">
-            <v-autocomplete
-              v-model="itemsMajor"
-              :items="itemsMajors"
-              chips
-              closable-chips
-              solo
-              item-title="majorsName"
-              item-value="id"
-              label="Các ngành học liên quan"
-              variant="outlined"
-              multiple
-            >
-              <template v-slot:chip="{ props, item }">
-                <v-chip v-bind="props" :text="item.raw.majorsName"></v-chip>
-              </template>
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-sm-12">
+              <v-text-field
+                v-model="title"
+                :readonly="loading"
+                :rules="[required]"
+                clearable
+                label="Tiêu đề bài đăng"
+                prepend-inner-icon="mdi-pencil"
+                variant="outlined"
+                autocomplete="null"
+              ></v-text-field>
+            </div>
+            <div class="col-sm-6">
+              <v-text-field
+                v-model="quantity"
+                :readonly="loading"
+                :rules="[required, requiredNumber]"
+                clearable
+                label="Số lượng tuyển dụng"
+                prepend-inner-icon="mdi-widgets"
+                variant="outlined"
+                autocomplete="null"
+                type="number"
+              ></v-text-field>
+            </div>
+            <div class="col-sm-6">
+              <v-text-field
+                v-model="expireTime"
+                :readonly="loading"
+                :rules="[required, requiredDate]"
+                clearable
+                label="Ngày hết hạn ứng tuyển"
+                prepend-inner-icon="mdi-event"
+                variant="outlined"
+                type="date"
+                id="txtDate"
+                
+              ></v-text-field>
+            </div>
+            <div class="col-sm-12">
+              <v-autocomplete
+                v-model="itemsMajor"
+                :items="itemsMajors"
+                chips
+                closable-chips
+                solo
+                item-title="majorsName"
+                item-value="id"
+                label="Các ngành học liên quan"
+                variant="outlined"
+                multiple
+              >
+                <template v-slot:chip="{ props, item }">
+                  <v-chip v-bind="props" :text="item.raw.majorsName"></v-chip>
+                </template>
 
-              <template v-slot:item="{ props, item }">
-                <v-list-item
-                  v-bind="props"
-                  :title="item?.raw?.majorsName"
-                ></v-list-item>
-              </template>
-            </v-autocomplete>
+                <template v-slot:item="{ props, item }">
+                  <v-list-item
+                    v-bind="props"
+                    :title="item?.raw?.majorsName"
+                  ></v-list-item>
+                </template>
+              </v-autocomplete>
+            </div>
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-sm-6 d-inline-block">
+                  <v-file-input
+                    accept="image/*"
+                    id="file"
+                    ref="file"
+                    @change="handleFileUpload()"
+                    label="Hình ảnh background"
+                    variant="outlined"
+                    dense
+                  ></v-file-input>
+                </div>
+                <div class="col-sm-6 d-inline-block text-center">
+                  <img class="image-preview" :src="fileSrc" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-sm-12">
+              <quill-editor
+                v-model:content="description"
+                contentType="html"
+                :rules="[required]"
+                style="height: 250px"
+                theme="snow"
+              ></quill-editor>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <div class="col-sm-12">
-          <div class="col-sm-6 d-inline-block">
-            <v-file-input
-              accept="image/*"
-              id="file"
-              ref="file"
-              @change="handleFileUpload()"
-              label="Hình ảnh background"
-              variant="outlined"
-              dense
-            ></v-file-input>
-          </div>
-          <div class="col-sm-6 d-inline-block text-center">
-            <img class="image-preview" :src="fileSrc" />
-          </div>
-        </div>
-        <div class="col-sm-12"></div>
-        <div class="col-sm-12 mt-10">
-          <v-btn
-            :disabled="!form"
-            :loading="loading"
-            block
-            color="success"
-            size="large"
-            type="submit"
-            variant="elevated"
-          >
-            {{ id == null ? "Tạo bài đăng" : "Cập nhật bài đăng" }}
-          </v-btn>
-        </div>
+      <div class="col-sm-12 mt-10">
+        <v-btn
+          :disabled="!form"
+          :loading="loading"
+          block
+          color="success"
+          size="large"
+          type="submit"
+          variant="elevated"
+        >
+          {{ id == null ? "Tạo bài đăng" : "Cập nhật bài đăng" }}
+        </v-btn>
       </div>
     </v-form>
   </section>
 </template>
 <script>
-import moment from 'moment';
+import moment from "moment";
 export default {
   props: ["id", "type"],
   data() {
@@ -142,6 +151,8 @@ export default {
     if (this.id != null) {
       await this.loadPost();
     }
+    var maxDate = moment(new Date()).format('YYYY-MM-DD');
+    document.getElementById("txtDate").setAttribute("min", maxDate);
   },
   methods: {
     async loadMajors() {
@@ -182,7 +193,7 @@ export default {
       let payloadData = {
         postData: postData,
         fileUpload: this.file,
-        type: this.type
+        type: this.type,
       };
       try {
         var message = "";
@@ -205,11 +216,15 @@ export default {
           );
           if (responData == true) {
             this.$toast.success(
-              `${message +" "+ this.title} được tạo thành công. Đang chờ duyệt...`
+              `${
+                message + " " + this.title
+              } được tạo thành công. Đang chờ duyệt...`
             );
           } else {
             this.$toast.warning(
-              `${message +" "+ this.title} không được tạo thành công. Đang chờ duyệt...`
+              `${
+                message + " " + this.title
+              } không được tạo thành công. Đang chờ duyệt...`
             );
           }
         } else {
@@ -220,29 +235,33 @@ export default {
           );
           if (responData == true) {
             this.$toast.success(
-              `${message +" "+ this.title} được cập nhật thành công. Đang chờ duyệt...`
+              `${
+                message + " " + this.title
+              } được cập nhật thành công. Đang chờ duyệt...`
             );
           } else {
             this.$toast.warning(
-              `${message +" "+ this.title} không được cập nhật thành công. Đang chờ duyệt...`
+              `${
+                message + " " + this.title
+              } không được cập nhật thành công. Đang chờ duyệt...`
             );
           }
         }
-        this.$router.replace("/enterprise/posts/"+this.type);
+        this.$router.replace("/enterprise/posts/" + this.type);
       } catch (err) {
         this.$toast.error(err.mesage || "Đã xảy ra lỗi");
-        this.$router.replace("/enterprise/posts/"+this.type);
+        this.$router.replace("/enterprise/posts/" + this.type);
       }
     },
     required(v) {
       return !!v || "Không được để trống!";
     },
     requiredNumber(v) {
-      return v>0 || "Không được chọn số nhỏ hơn 0!";
+      return v > 0 || "Không được chọn số nhỏ hơn 0!";
     },
     requiredDate(v) {
       //console.log(moment(new Date()).format('DD-MM-YYYY'))
-      console.log(moment(new Date()))
+      console.log(moment(new Date()));
       return moment(v) >= moment(new Date()) || "Không được chọn ngày quá khứ!";
     },
   },

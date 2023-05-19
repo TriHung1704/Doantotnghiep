@@ -14,11 +14,7 @@
             >Tạo bài mới</button-base
           >
         </div>
-        <div class="col-sm-6">
-          <button-base :col="'col-12'" link :to="'/'"
-            >Quay về trang chính</button-base
-          >
-        </div>
+       
       </div>
       <div>
         <notification-base
@@ -97,4 +93,8 @@ export default {
 .box-title .btn-submit {
   margin: 4px;
 }
+.btn-submit{
+  margin-top: 5px;
+  width: initial;
+} 
 </style>

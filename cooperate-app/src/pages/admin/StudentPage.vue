@@ -89,11 +89,14 @@ export default {
         this.isDisabled = true;
         var result = await this.$store.dispatch("admin/registerStudent", this.file);
         if (result) {
-          this.isDisabled = false;
+          this.$refs.file.reset();
+          this.isDisabled = true;
           this.loadStudents();
           this.$toast.success("Thêm danh sách thành công!");
         }
       } catch {
+        this.isDisabled = true;
+        this.$refs.file.reset();
         this.$toast.warning("Đã xảy ra sự cố!");
       }
     },

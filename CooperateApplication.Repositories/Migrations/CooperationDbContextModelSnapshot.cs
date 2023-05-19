@@ -56,7 +56,160 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 1,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(9610),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(3263),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "19T1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(3458),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "19T2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(3479),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "19C1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(3499),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "19C2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(3519),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "19CDT1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(3574),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "19CDT2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(3655),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "19DT1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(3986),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "19DT2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4014),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "19TDH1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4038),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "19TDH2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4059),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "19MT1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4080),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "19MT2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4100),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "19SK1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4120),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "19XD1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4140),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "19XD2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4160),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "19XC1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4180),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "19XC2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4202),
                             IsDeleted = false,
                             MajorsId = 1,
                             Name = "20T1",
@@ -64,11 +217,299 @@ namespace CooperateApplication.Repositories.Migrations
                         },
                         new
                         {
-                            Id = 2,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(9934),
+                            Id = 19,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4223),
                             IsDeleted = false,
                             MajorsId = 1,
                             Name = "20T2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4243),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "20C1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4263),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "20C2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4283),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "20CDT1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 23,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4303),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "20CDT2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 24,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4347),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "20DT1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 25,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4369),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "20DT2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 26,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4389),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "20TDH1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 27,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4410),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "20TDH2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 28,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4430),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "20MT1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 29,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4450),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "20MT2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 30,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4470),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "20SK1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 31,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4490),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "20XD1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 32,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4511),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "20XD2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 33,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4531),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "20XC1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 34,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4553),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "20XC2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 35,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4573),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "21T1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 36,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4594),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "21T2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 37,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4615),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "21C1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 38,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4634),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "21C2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 39,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4655),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "21CDT1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 40,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4675),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "21CDT2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 41,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4695),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "21DT1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 42,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4714),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "21DT2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 43,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4788),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "21TDH1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 44,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4811),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "21TDH2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 45,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4831),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "21MT1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 46,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4851),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "21MT2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 47,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4871),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "21SK1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 48,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4891),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "21XD1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 49,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4910),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "21XD2",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 50,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4931),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "21XC1",
+                            Status = false
+                        },
+                        new
+                        {
+                            Id = 51,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(4951),
+                            IsDeleted = false,
+                            MajorsId = 1,
+                            Name = "21XC2",
                             Status = false
                         });
                 });
@@ -112,7 +553,7 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 1,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(6064),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(1777),
                             IsDeleted = false,
                             Name = "Khoa Công Nghệ Số",
                             Status = false,
@@ -121,7 +562,7 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 2,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(6385),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(1916),
                             IsDeleted = false,
                             Name = "Khoa Điện - Điện Tử",
                             Status = false,
@@ -130,7 +571,7 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 3,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(6432),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(1941),
                             IsDeleted = false,
                             Name = "Khoa Cơ Khí",
                             Status = false,
@@ -139,7 +580,7 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 4,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(6529),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(1971),
                             IsDeleted = false,
                             Name = "Khoa Xây Dựng",
                             Status = false,
@@ -148,9 +589,18 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 5,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(6561),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(1992),
                             IsDeleted = false,
                             Name = "Khoa Hóa Học và Môi Trường",
+                            Status = false,
+                            UniversityId = 1
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(2022),
+                            IsDeleted = false,
+                            Name = "Khoa Sư Phạm Công Nghiệp",
                             Status = false,
                             UniversityId = 1
                         });
@@ -215,13 +665,13 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 1,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 14, 876, DateTimeKind.Utc).AddTicks(2444),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 201, DateTimeKind.Utc).AddTicks(850),
                             Description = "Là doanh nghiệp phát triển các phần mềm ứng dụng chất lượng ca và ổn định",
                             Email = "hr@gmail.com",
                             IsDeleted = false,
                             Name = "Test Company",
                             Phone = "0325867435",
-                            Status = false,
+                            Status = true,
                             Website = "https://www.google.com.vn/"
                         });
                 });
@@ -267,7 +717,7 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 1,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 72, DateTimeKind.Utc).AddTicks(2875),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 375, DateTimeKind.Utc).AddTicks(5703),
                             EnterpriseId = 1,
                             IsDeleted = false,
                             Status = false,
@@ -276,7 +726,7 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 2,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 259, DateTimeKind.Utc).AddTicks(7923),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 549, DateTimeKind.Utc).AddTicks(8020),
                             EnterpriseId = 1,
                             IsDeleted = false,
                             Status = false,
@@ -305,14 +755,6 @@ namespace CooperateApplication.Repositories.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("text")
-                        .HasColumnName("TenChiNhanh");
-
-                    b.Property<string>("ProvinceAddress")
-                        .HasColumnType("text")
-                        .HasColumnName("Tinh");
-
                     b.Property<bool>("Status")
                         .HasColumnType("tinyint(1)")
                         .HasColumnName("TrangThai");
@@ -331,23 +773,19 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 1,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(1578),
-                            DetailAddress = "Đường 3/2",
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 549, DateTimeKind.Utc).AddTicks(9803),
+                            DetailAddress = "Tầng 23, Tòa nhà ACB Bank - Đường 3/2 Thuận Phước Đà Nẵng",
                             EnterpriseId = 1,
                             IsDeleted = false,
-                            Name = "Tầng 23, Tòa nhà ACB Bank",
-                            ProvinceAddress = "Thuận Phước",
                             Status = false
                         },
                         new
                         {
                             Id = 2,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(1934),
-                            DetailAddress = "Đường Hùng Vương",
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(34),
+                            DetailAddress = "Tầng 13, Tòa nhà Viettin Bank - Đường Hùng Vương Hải Châu Đà Nẵng",
                             EnterpriseId = 1,
                             IsDeleted = false,
-                            Name = "Tầng 13, Tòa nhà Viettin Bank",
-                            ProvinceAddress = "Hải Châu",
                             Status = false
                         });
                 });
@@ -391,7 +829,7 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 1,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(3150),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(610),
                             EnterpriseId = 1,
                             IsDeleted = false,
                             Name = "Software",
@@ -400,7 +838,7 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 2,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(3434),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(717),
                             EnterpriseId = 1,
                             IsDeleted = false,
                             Name = "Giải trí/ Game",
@@ -409,7 +847,7 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 3,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(3513),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(749),
                             EnterpriseId = 1,
                             IsDeleted = false,
                             Name = "Dịch vụ IT",
@@ -456,7 +894,7 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 1,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(7654),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(2652),
                             DepartmentId = 1,
                             IsDeleted = false,
                             Name = "Ngành Công Nghệ Thông Tin",
@@ -465,43 +903,25 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 2,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(7784),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(2741),
                             DepartmentId = 2,
                             IsDeleted = false,
-                            Name = "Ngành Công nghệ kỹ thuật nhiệt",
+                            Name = "Ngành Tự Động Hóa",
                             Status = false
                         },
                         new
                         {
                             Id = 3,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(7816),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(2764),
                             DepartmentId = 2,
                             IsDeleted = false,
-                            Name = "Ngành Công nghệ kỹ thuật điện, điện tử",
+                            Name = "Ngành Điện - Điện Tử",
                             Status = false
                         },
                         new
                         {
-                            Id = 5,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(7845),
-                            DepartmentId = 2,
-                            IsDeleted = false,
-                            Name = "Ngành Công nghệ kỹ thuật điện tử - viễn thông",
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(7874),
-                            DepartmentId = 2,
-                            IsDeleted = false,
-                            Name = "Ngành Công nghệ kỹ thuật điều khiển và tự động hóa",
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(7904),
+                            Id = 4,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(2784),
                             DepartmentId = 3,
                             IsDeleted = false,
                             Name = "Ngành Công nghệ kỹ thuật cơ khí",
@@ -509,8 +929,8 @@ namespace CooperateApplication.Repositories.Migrations
                         },
                         new
                         {
-                            Id = 8,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(7933),
+                            Id = 5,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(2803),
                             DepartmentId = 3,
                             IsDeleted = false,
                             Name = "Ngành Công nghệ kỹ thuật cơ điện tử",
@@ -518,65 +938,29 @@ namespace CooperateApplication.Repositories.Migrations
                         },
                         new
                         {
-                            Id = 9,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(7962),
+                            Id = 6,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(2825),
                             DepartmentId = 4,
                             IsDeleted = false,
-                            Name = "Ngành Công nghệ kỹ thuật xây dựng",
+                            Name = "Ngành Công nghệ kỹ thuật xây dựng",
                             Status = false
                         },
                         new
                         {
-                            Id = 10,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(7992),
+                            Id = 7,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(2845),
                             DepartmentId = 4,
                             IsDeleted = false,
-                            Name = "Ngành Công nghệ kỹ thuật giao thông",
+                            Name = "Ngành Công nghệ kỹ thuật xây dựng cầu đường",
                             Status = false
                         },
                         new
                         {
-                            Id = 11,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(8023),
-                            DepartmentId = 4,
-                            IsDeleted = false,
-                            Name = "Ngành Công nghệ kỹ thuật kiến trúc",
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 12,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(8052),
-                            DepartmentId = 4,
-                            IsDeleted = false,
-                            Name = "Kỹ thuật cơ sở hạ tầng",
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 13,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(8124),
+                            Id = 8,
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(2864),
                             DepartmentId = 5,
                             IsDeleted = false,
-                            Name = "Công nghệ kỹ thuật môi trường",
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 14,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(8161),
-                            DepartmentId = 5,
-                            IsDeleted = false,
-                            Name = "Ngành Kỹ Thuật thực phẩm",
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 15,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(8583),
-                            DepartmentId = 5,
-                            IsDeleted = false,
-                            Name = "Ngành Công nghệ vật liệu",
+                            Name = "Ngành Kỹ Thuật môi trường",
                             Status = false
                         });
                 });
@@ -800,7 +1184,7 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 1,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 14, 659, DateTimeKind.Utc).AddTicks(410),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 25, 996, DateTimeKind.Utc).AddTicks(2659),
                             IsDeleted = false,
                             RoleName = "Administrator",
                             Status = false
@@ -808,23 +1192,15 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 2,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 14, 660, DateTimeKind.Utc).AddTicks(227),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 25, 997, DateTimeKind.Utc).AddTicks(1360),
                             IsDeleted = false,
                             RoleName = "EmployeeHRM",
                             Status = false
                         },
                         new
                         {
-                            Id = 3,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 14, 660, DateTimeKind.Utc).AddTicks(330),
-                            IsDeleted = false,
-                            RoleName = "EmployeeMentor",
-                            Status = false
-                        },
-                        new
-                        {
                             Id = 4,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 14, 660, DateTimeKind.Utc).AddTicks(362),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 25, 997, DateTimeKind.Utc).AddTicks(1436),
                             IsDeleted = false,
                             RoleName = "EmployeeAdmin",
                             Status = false
@@ -832,7 +1208,7 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 5,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 14, 660, DateTimeKind.Utc).AddTicks(383),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 25, 997, DateTimeKind.Utc).AddTicks(1454),
                             IsDeleted = false,
                             RoleName = "Student",
                             Status = false
@@ -994,7 +1370,7 @@ namespace CooperateApplication.Repositories.Migrations
                         {
                             Id = 1,
                             Address = "Đà Nẵng",
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 260, DateTimeKind.Utc).AddTicks(4914),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 550, DateTimeKind.Utc).AddTicks(1280),
                             Introduction = "description",
                             IsDeleted = false,
                             Name = "Test University",
@@ -1080,11 +1456,13 @@ namespace CooperateApplication.Repositories.Migrations
                         {
                             Id = 1,
                             Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 14, 875, DateTimeKind.Utc).AddTicks(9718),
-                            FullName = "Quản trị viên 1",
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 200, DateTimeKind.Utc).AddTicks(8712),
+                            Email = "qtrv@gmail.com",
+                            FullName = "Quản trị viên",
                             Gender = false,
                             IsDeleted = false,
-                            Password = "$2a$11$1S0JhB3xoqMQjJeHpacEguh2U1IIdJpiUpLLAZDQqUPuxOePdkU92",
+                            Password = "$2a$11$YlLGQfQQIUbZB6W/GX9U/.R5P10UkmS2p5h3W/ZpGh9SWGzPIijl2",
+                            Phone = "0987654321",
                             RefreshTokenExpiryTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = false,
                             UserName = "admin",
@@ -1094,11 +1472,11 @@ namespace CooperateApplication.Repositories.Migrations
                         {
                             Id = 2,
                             Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 72, DateTimeKind.Utc).AddTicks(933),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 375, DateTimeKind.Utc).AddTicks(4034),
                             FullName = "Employee HRM",
                             Gender = false,
                             IsDeleted = false,
-                            Password = "$2a$11$QgXsvjLeWgxG0DiHPKvzxeSdvJjb8LH23GCAIzN.yu5NHO4jswG.6",
+                            Password = "$2a$11$3r4Gy7cqW0I2cW13aVkL6O2lWIE394dYysdEttyo1Hq6XI0gbbzuG",
                             RefreshTokenExpiryTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = false,
                             UserName = "employee_hrm",
@@ -1108,11 +1486,11 @@ namespace CooperateApplication.Repositories.Migrations
                         {
                             Id = 3,
                             Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 259, DateTimeKind.Utc).AddTicks(6903),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 549, DateTimeKind.Utc).AddTicks(7084),
                             FullName = "Employee admin",
                             Gender = false,
                             IsDeleted = false,
-                            Password = "$2a$11$Kp2XIGXMBG9Dxr1GC3kr.eZVyQWZuEjapn6RkianIPkVKOBKaBodK",
+                            Password = "$2a$11$LasxMd3SI.jluNseAO088uPEx4QYWbHE8qdm.zVV3Pen3u2o9aiTe",
                             RefreshTokenExpiryTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = false,
                             UserName = "employee_admin",
@@ -1161,7 +1539,7 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 1,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 14, 876, DateTimeKind.Utc).AddTicks(1202),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 200, DateTimeKind.Utc).AddTicks(9991),
                             IsDeleted = false,
                             RoleId = 1,
                             Status = false,
@@ -1170,7 +1548,7 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 2,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 72, DateTimeKind.Utc).AddTicks(3136),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 375, DateTimeKind.Utc).AddTicks(5906),
                             IsDeleted = false,
                             RoleId = 2,
                             Status = false,
@@ -1179,7 +1557,7 @@ namespace CooperateApplication.Repositories.Migrations
                         new
                         {
                             Id = 3,
-                            CreateAt = new DateTime(2023, 4, 19, 3, 17, 15, 259, DateTimeKind.Utc).AddTicks(7744),
+                            CreateAt = new DateTime(2023, 5, 2, 17, 6, 26, 549, DateTimeKind.Utc).AddTicks(7879),
                             IsDeleted = false,
                             RoleId = 4,
                             Status = false,

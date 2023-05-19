@@ -1,0 +1,15 @@
+E:\CooperateApp\CooperateApplication.Service\bin\Release\net6.0\CooperateApplication.Service.deps.json
+E:\CooperateApp\CooperateApplication.Service\bin\Release\net6.0\CooperateApplication.Service.dll
+E:\CooperateApp\CooperateApplication.Service\bin\Release\net6.0\CooperateApplication.Service.pdb
+E:\CooperateApp\CooperateApplication.Service\bin\Release\net6.0\CooperateApplication.Repositories.dll
+E:\CooperateApp\CooperateApplication.Service\bin\Release\net6.0\CooperateApplication.Repositories.pdb
+E:\CooperateApp\CooperateApplication.Service\obj\Release\net6.0\CooperateApplication.Service.csproj.AssemblyReference.cache
+E:\CooperateApp\CooperateApplication.Service\obj\Release\net6.0\CooperateApplication.Service.GeneratedMSBuildEditorConfig.editorconfig
+E:\CooperateApp\CooperateApplication.Service\obj\Release\net6.0\CooperateApplication.Service.AssemblyInfoInputs.cache
+E:\CooperateApp\CooperateApplication.Service\obj\Release\net6.0\CooperateApplication.Service.AssemblyInfo.cs
+E:\CooperateApp\CooperateApplication.Service\obj\Release\net6.0\CooperateApplication.Service.csproj.CoreCompileInputs.cache
+E:\CooperateApp\CooperateApplication.Service\obj\Release\net6.0\CooperateApplication.Service.csproj.CopyComplete
+E:\CooperateApp\CooperateApplication.Service\obj\Release\net6.0\CooperateApplication.Service.dll
+E:\CooperateApp\CooperateApplication.Service\obj\Release\net6.0\refint\CooperateApplication.Service.dll
+E:\CooperateApp\CooperateApplication.Service\obj\Release\net6.0\CooperateApplication.Service.pdb
+E:\CooperateApp\CooperateApplication.Service\obj\Release\net6.0\ref\CooperateApplication.Service.dll

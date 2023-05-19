@@ -10,12 +10,9 @@
           <div class="name-comp clearfix d-flex">
             <p class="img fl">
               <a href="/">
-                <img
-                  loading="lazy"
-                  class="logo-company"
+                <img loading="lazy" class="logo-company"
                   :src="imageLogoSrc == '' ? require('@/assets/' + 'company-default.png') : imageLogoSrc"
-                  alt="Campany Logo"
-              /></a>
+                  alt="Campany Logo" /></a>
             </p>
             <div class="box-company">
               <a href="#">
@@ -24,9 +21,7 @@
                 </p>
               </a>
               <p class="text-justify">
-                <a :href="'mailto: ' + post.enterprise.email"
-                  >Liên hệ qua email</a
-                >
+                <a :href="'mailto: ' + post.enterprise.email">Liên hệ qua email</a>
                 -
                 <a :href="post.enterprise.website">Website doanh nghiệp</a>
               </p>
@@ -38,49 +33,29 @@
         <div class="left-content">
           <span>{{ post.title }}</span>
           <div class="box-description" v-html="post.description"></div>
-          <image-post :image="imageSrc" class="img-post"></image-post>
+          <image-post :image="post.image" class="img-post"></image-post>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="right-content">
           <div class="button-content">
             <access-roles-base :accessRoles="['Student']">
-              <button-base
-                v-if="post.type == 3"
-                :disabled="post.isSeen || requiredDate"
-                class="btn-submit"
-                @click="senimarAttends()"
-                >Tham gia ngay
+              <button-base v-if="post.type == 3" :disabled="post.isSeen || requiredDate" class="btn-submit"
+                @click="senimarAttends()">Tham gia ngay
                 <v-badge v-if="post.isSeen" content="Đã đăng kí" color="error">
                   <v-icon>mdi-send</v-icon>
-                </v-badge></button-base
-              >
-              <button-base
-                v-else
-                :disabled="post.isSeen || requiredDate"
-                class="btn-submit"
-                @click="recruitmentCV()"
-                >Ứng tuyển ngay
-                <v-badge
-                  v-if="post.isSeen"
-                  content="Đã ứng tuyển"
-                  color="error"
-                >
+                </v-badge></button-base>
+              <button-base v-else :disabled="post.isSeen || requiredDate" class="btn-submit" @click="recruitmentCV()">Ứng
+                tuyển ngay
+                <v-badge v-if="post.isSeen" content="Đã ứng tuyển" color="error">
                   <v-icon>mdi-send</v-icon>
-                </v-badge></button-base
-              >
+                </v-badge></button-base>
               <span>Hoặc</span>
             </access-roles-base>
 
-            <button-base
-              ><span :title="post.enterprise.phone"
-                >Liên hệ qua SĐT</span
-              ></button-base
-            >
-            <span :class="requiredDate ? 'text-red' : ''"
-              >Hạn cuối: {{ getFormattedDate(post.expireTime) }}
-              <v-icon size="12" icon="mdi-calendar"></v-icon
-            ></span>
+            <button-base><span :title="post.enterprise.phone">Liên hệ qua SĐT {{ post.enterprise.phone }}</span></button-base>
+            <span :class="requiredDate ? 'text-red' : ''">Hạn cuối: {{ getFormattedDate(post.expireTime) }}
+              <v-icon size="12" icon="mdi-calendar"></v-icon></span>
           </div>
           <hr />
           <div class="company-info">
@@ -90,11 +65,8 @@
               <p>{{ post.enterprise.name }}</p>
               <span>Địa chỉ</span>
               <ol>
-                <li
-                  v-for="facility in post.enterpriseFacilities"
-                  :key="facility.id"
-                >
-                  {{ facility.name + " - " + facility.provinceAddress }}
+                <li v-for="facility in post.enterpriseFacilities" :key="facility.id">
+                  {{ facility.detailAddress }}
                 </li>
               </ol>
               <span>Ngành nghề</span>
@@ -127,16 +99,15 @@ export default {
   data() {
     return {
       post: null,
-      imageSrc: null,
       imageLogoSrc: null,
     };
   },
   async created() {
     await this.loadPost();
   },
-  computed:{
+  computed: {
     requiredDate() {
-      let date = moment(this.post.expireTime).format("YYYY-MM-DD")
+      let date = moment(this.post.expireTime).format("DD-MM-YYYY")
       console.log(date);
       return moment(date) < moment(new Date());
     },
@@ -147,7 +118,7 @@ export default {
         this.post = await this.$store.dispatch("post/loadPost", this.id);
         if (this.post.enterprise.imageLogo == null || this.post.enterprise.imageLogo == "") {
           this.imageLogoSrc = "";
-        }else{
+        } else {
           this.imageLogoSrc = urlApi + this.post.enterprise.imageLogo;
         }
         if (this.post.length == 0) {
@@ -192,7 +163,7 @@ export default {
       }
     },
     getFormattedDate(date) {
-      return moment(date).format("YYYY-MM-DD");
+      return moment(date).format("DD-MM-YYYY");
     }
   },
 };
@@ -224,13 +195,14 @@ export default {
 }
 
 .left-content span {
-  background-color: darkolivegreen;
+  background-color: #1F9AD6;
   color: aliceblue;
   font-size: 16px;
   /* text-align: center; */
   padding: 5px 5px;
   box-shadow: 0 2px 8px rgb(0 0 0 / 26%);
 }
+
 .right-content {
   padding: 5px;
   /* position: relative; */
@@ -244,7 +216,7 @@ export default {
   border-radius: 0.25rem;
 }
 
-span.text-red{
+span.text-red {
   color: red;
 }
 
@@ -295,6 +267,7 @@ span.text-red{
   font-size: 16px;
   font-weight: 500;
 }
+
 .company-info .company-des p,
 .company-info .company-des ol {
   word-wrap: break-word;
@@ -305,29 +278,37 @@ span.text-red{
   text-decoration: none;
   color: inherit;
 }
+
 .box-company .comapny-name {
   font-weight: 700;
   font-size: 20px;
 }
+
 .box-description {
   font-size: 16px;
   text-align: justify;
+  margin-top: 15px;
 }
+
 .box-description::v-deep h1 {
   font-size: 16px;
   text-align: justify;
 }
+
 .box-description::v-deep h2 {
   font-size: 14px;
 }
+
 .box-description::v-deep h3 {
   font-size: 12px;
 }
+
 .box-description::v-deep ul,
 .box-description::v-deep p,
 .box-description::v-deep ol {
   font-size: 14px;
 }
+
 .majors-related div {
   margin: 5px;
   display: inline-flex;

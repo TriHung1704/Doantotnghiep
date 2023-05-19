@@ -66,7 +66,7 @@
         </div>
       </div>
       <div class="row">
-        <card-base
+        <card-base :class="'col-lg-4'"
           v-for="post in postsRecruitment.postList"
           :key="post.id"
           :post="post"
@@ -110,7 +110,7 @@ export default {
         let payloadRecruitment = {
           type: "recruitment",
           page: this.pageRecruitment,
-          limit: 20,
+          limit: 6,
           title: this.title,
           enterpriseName: this.enterprise,
           majorsIds: this.itemsMajor ?? this.itemsMajor.join().split(","),

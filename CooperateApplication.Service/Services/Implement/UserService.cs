@@ -1,6 +1,7 @@
 ﻿using CooperateApplication.Repositories.Context;
 using CooperateApplication.Repositories.Entities;
 using CooperateApplication.Repositories.Repository;
+using CooperateApplication.Service.Model;
 using IronXL;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -111,6 +112,18 @@ namespace CooperateApplication.Service.Services
             {
                 throw new NotImplementedException();
             }
+        }
+        public async Task<UserModel> GetUser()
+        {
+            var userCurrent = GetUserCurent();
+
+            var user = await GetById(userCurrent.Id);
+            if (user == null)
+            {
+                throw new NotImplementedException();
+            }
+
+            return user.ToModel();
         }
     }
 }

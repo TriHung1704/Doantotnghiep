@@ -126,7 +126,7 @@ namespace CooperateApplication.Service.Services
             var listField = new List<Model.EnterpriseField>();
             enterpriseField.ForEach(x => listField.Add(new Model.EnterpriseField() { Id = x.Id, Name = x.Name }));
             var listFacility = new List<Model.EnterpriseFacility>();
-            enterpriseFacility.ForEach(x => listFacility.Add(new Model.EnterpriseFacility() { Id = x.Id, Name = x.Name, ProvinceAddress = x.ProvinceAddress, DetailAddress = x.DetailAddress }));
+            enterpriseFacility.ForEach(x => listFacility.Add(new Model.EnterpriseFacility() { Id = x.Id, DetailAddress = x.DetailAddress }));
 
             var enterprise = post.Enterprise;
             postModel.Enterprise = new EnterpriseModel() { 

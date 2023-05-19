@@ -4,9 +4,9 @@
         <image-post :image="image" class="card-img-top"></image-post>
         <div class="card-body">
           <router-link :to="detailsLink">{{
-            title.length > 30 ? title.substring(0,30) + ' ...' : title
+            title.length > 100 ? title.substring(0,100) + ' ...' : title
           }}</router-link>
-          <div class="card-text" v-html="description.length > 200 ? description.substring(0,200) + ' ...' : description">         
+          <div class="card-text" v-html="description.length > 240 ? description.substring(0,240) + ' ...' : description">         
           </div>
         </div>
         <div class="footer-card">
@@ -45,7 +45,7 @@ import moment from 'moment';
   },
   methods: {
     getFormattedDate(date) {
-      return moment(date).format("YYYY-MM-DD")
+      return moment(date).format("DD-MM-YYYY")
     }
   },
   }
@@ -79,8 +79,9 @@ import moment from 'moment';
 
 .card-body {
   padding: 0px 10px;
-  max-height: 150px;
-  height: 150px;
+  max-height: 200px;
+  height: 200px;
+  margin-top: 10px;
 }
 
 .card-body a {
@@ -88,11 +89,10 @@ import moment from 'moment';
   /* font-size: 16px; */
   font-weight: bold;
   cursor: pointer;
-  border-bottom: 2px dashed;
 }
 
 .display-date{
-  font-size: 10px;
+  font-size: 12px;
   color: #3a3a3a;
   margin: 0px 0px;
   display: inline-block;
@@ -112,7 +112,7 @@ import moment from 'moment';
 }
 
 .box-company{
-  background-color: darkolivegreen;
+  background-color: #1F9AD6;
   color: aliceblue;
   font-size: 14px;
   text-align: center;

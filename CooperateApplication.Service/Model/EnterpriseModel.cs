@@ -19,7 +19,11 @@ namespace CooperateApplication.Service.Model
         public string Description { get; set; }
         public string ImageLogo { get; set; }
         public byte[] ImageByte { get; set; }
-        public string CooperationSigningLink { get; set; }
+        public string UserName { get; set; }
+        public int UserId { get; set; }
+        public bool Status { get; set; }
+        public List<EnterpriseField> FieldCompanyList { get; set; }
+        public List<EnterpriseFacility> AddressCompanyList { get; set; }
     }
     public class EnterpriseField
     {
@@ -29,8 +33,11 @@ namespace CooperateApplication.Service.Model
     public class EnterpriseFacility 
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string ProvinceAddress { get; set; }
         public string DetailAddress { get; set; }
+    }
+    public class EnterpriseModels
+    {
+        public List<EnterpriseModel> EnterpriseList { get; set; }
+        public int Total { get; set; }
     }
 }

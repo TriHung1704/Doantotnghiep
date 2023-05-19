@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Doantotnghiep\\CooperateApplication\\CooperateApplication.csproj": {}
+    "E:\\CooperateApp\\CooperateApplication\\CooperateApplication.csproj": {}
   },
   "projects": {
-    "D:\\Doantotnghiep\\CooperateApplication.Repositories\\CooperateApplication.Repositories.csproj": {
+    "E:\\CooperateApp\\CooperateApplication.Repositories\\CooperateApplication.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Doantotnghiep\\CooperateApplication.Repositories\\CooperateApplication.Repositories.csproj",
+        "projectUniqueName": "E:\\CooperateApp\\CooperateApplication.Repositories\\CooperateApplication.Repositories.csproj",
         "projectName": "CooperateApplication.Repositories",
-        "projectPath": "D:\\Doantotnghiep\\CooperateApplication.Repositories\\CooperateApplication.Repositories.csproj",
+        "projectPath": "E:\\CooperateApp\\CooperateApplication.Repositories\\CooperateApplication.Repositories.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Doantotnghiep\\CooperateApplication.Repositories\\obj\\",
+        "outputPath": "E:\\CooperateApp\\CooperateApplication.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -98,14 +98,14 @@
         }
       }
     },
-    "D:\\Doantotnghiep\\CooperateApplication.Service\\CooperateApplication.Service.csproj": {
+    "E:\\CooperateApp\\CooperateApplication.Service\\CooperateApplication.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Doantotnghiep\\CooperateApplication.Service\\CooperateApplication.Service.csproj",
+        "projectUniqueName": "E:\\CooperateApp\\CooperateApplication.Service\\CooperateApplication.Service.csproj",
         "projectName": "CooperateApplication.Service",
-        "projectPath": "D:\\Doantotnghiep\\CooperateApplication.Service\\CooperateApplication.Service.csproj",
+        "projectPath": "E:\\CooperateApp\\CooperateApplication.Service\\CooperateApplication.Service.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Doantotnghiep\\CooperateApplication.Service\\obj\\",
+        "outputPath": "E:\\CooperateApp\\CooperateApplication.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -127,8 +127,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Doantotnghiep\\CooperateApplication.Repositories\\CooperateApplication.Repositories.csproj": {
-                "projectPath": "D:\\Doantotnghiep\\CooperateApplication.Repositories\\CooperateApplication.Repositories.csproj"
+              "E:\\CooperateApp\\CooperateApplication.Repositories\\CooperateApplication.Repositories.csproj": {
+                "projectPath": "E:\\CooperateApp\\CooperateApplication.Repositories\\CooperateApplication.Repositories.csproj"
               }
             }
           }
@@ -184,14 +184,14 @@
         }
       }
     },
-    "D:\\Doantotnghiep\\CooperateApplication\\CooperateApplication.csproj": {
+    "E:\\CooperateApp\\CooperateApplication\\CooperateApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Doantotnghiep\\CooperateApplication\\CooperateApplication.csproj",
+        "projectUniqueName": "E:\\CooperateApp\\CooperateApplication\\CooperateApplication.csproj",
         "projectName": "CooperateApplication",
-        "projectPath": "D:\\Doantotnghiep\\CooperateApplication\\CooperateApplication.csproj",
+        "projectPath": "E:\\CooperateApp\\CooperateApplication\\CooperateApplication.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Doantotnghiep\\CooperateApplication\\obj\\",
+        "outputPath": "E:\\CooperateApp\\CooperateApplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -213,8 +213,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Doantotnghiep\\CooperateApplication.Service\\CooperateApplication.Service.csproj": {
-                "projectPath": "D:\\Doantotnghiep\\CooperateApplication.Service\\CooperateApplication.Service.csproj"
+              "E:\\CooperateApp\\CooperateApplication.Service\\CooperateApplication.Service.csproj": {
+                "projectPath": "E:\\CooperateApp\\CooperateApplication.Service\\CooperateApplication.Service.csproj"
               }
             }
           }

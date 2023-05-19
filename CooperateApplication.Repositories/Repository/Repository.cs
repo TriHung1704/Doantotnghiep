@@ -138,6 +138,7 @@ namespace CooperateApplication.Repositories.Repository
                 if (entry != null)
                 {
                     entity.UpdateAt = DateTime.UtcNow;
+                    entity.CreateAt = entry.CreateAt;
                     _context.Entry(entry).CurrentValues.SetValues(entity);
                 }
                 else

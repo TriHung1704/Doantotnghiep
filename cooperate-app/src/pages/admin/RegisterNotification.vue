@@ -7,37 +7,17 @@
     <v-form v-model="form" @submit.prevent="onSubmit">
       <div class="row">
         <div class="col-sm-12">
-          <v-text-field
-            v-model="title"
-            :readonly="loading"
-            :rules="[required]"
-            clearable
-            label="Tiêu đề bài đăng"
-            prepend-inner-icon="mdi-pencil"
-            variant="outlined"
-            autocomplete="null"
-          ></v-text-field>
+          <v-text-field v-model="title" :readonly="loading" :rules="[required]" clearable label="Tiêu đề bài đăng"
+            prepend-inner-icon="mdi-pencil" variant="outlined" autocomplete="null"></v-text-field>
         </div>
         <div class="col-sm-12">
-          <quill-editor
-            v-model:content="description"
-            contentType="html"
-            :rules="[required]"
-            theme="snow"
-          ></quill-editor>
+          <quill-editor v-model:content="description" contentType="html" :rules="[required]" theme="snow"></quill-editor>
         </div>
-        
+
         <div class="col-sm-12 mt-10 pt-4">
           <div class="col-sm-6 d-inline-block">
-            <v-file-input
-              accept="image/*"
-              id="file"
-              ref="file"
-              @change="handleFileUpload()"
-              label="Hình ảnh background"
-              variant="outlined"
-              dense
-            ></v-file-input>
+            <v-file-input accept="image/*" id="file" ref="file" @change="handleFileUpload()" label="Hình ảnh background"
+              variant="outlined" dense></v-file-input>
           </div>
           <div class="col-sm-6 d-inline-block text-center">
             <img class="image-preview" :src="fileSrc" />
@@ -45,15 +25,7 @@
         </div>
         <div class="col-sm-12"></div>
         <div class="col-sm-12 mt-10">
-          <v-btn
-            :disabled="!form"
-            :loading="loading"
-            block
-            color="success"
-            size="large"
-            type="submit"
-            variant="elevated"
-          >
+          <v-btn :disabled="!form" :loading="loading" block color="success" size="large" type="submit" variant="elevated">
             {{ id == null ? "Tạo bài đăng" : "Cập nhật bài đăng" }}
           </v-btn>
         </div>
@@ -118,11 +90,11 @@ export default {
           );
           if (responData == true) {
             this.$toast.success(
-              `${"Thông báo "+ this.title} được tạo thành công!`
+              `${"Thông báo " + this.title} được tạo thành công!`
             );
           } else {
             this.$toast.warning(
-              `${"Thông báo "+ this.title} không được tạo thành công!`
+              `${"Thông báo " + this.title} không được tạo thành công!`
             );
           }
         } else {
@@ -133,11 +105,11 @@ export default {
           );
           if (responData == true) {
             this.$toast.success(
-              `${"Thông báo "+ this.title} được cập nhật thành công!`
+              `${"Thông báo " + this.title} được cập nhật thành công!`
             );
           } else {
             this.$toast.warning(
-              `${"Thông báo "+ this.title} không được cập nhật thành công!`
+              `${"Thông báo " + this.title} không được cập nhật thành công!`
             );
           }
         }
@@ -174,5 +146,4 @@ export default {
 .ql-container {
   min-height: 150px;
 }
-
 </style>

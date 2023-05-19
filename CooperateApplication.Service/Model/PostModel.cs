@@ -50,7 +50,7 @@ namespace CooperateApplication.Service.Model
             postModel.ExpireTime = post.ExpireTime;
             postModel.Type = (PostTypeName)post.Type;
             postModel.EnterpriseName = post.Enterprise?.Name;
-            postModel.UserName = post.User?.UserName;
+            postModel.UserName = post.User?.FullName;
             postModel.MajorsModels = majorsModel;
             postModel.CreateAt = post.CreateAt;
             return postModel;

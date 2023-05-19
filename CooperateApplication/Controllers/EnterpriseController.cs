@@ -14,11 +14,70 @@ namespace CooperateApplication.Controllers
     {
         private readonly IEnterpriseEmployeeService _enterpriseEmployeeService;
         private readonly IPostService _postService;
+        private readonly IFileService _fileService;
 
-        public EnterpriseController(IEnterpriseEmployeeService enterpriseEmployeeService, IPostService postService)
+        public EnterpriseController(IEnterpriseEmployeeService enterpriseEmployeeService, IPostService postService, IFileService fileService)
         {
             _enterpriseEmployeeService = enterpriseEmployeeService;
             _postService = postService;
+            _fileService = fileService;
+        }
+
+        [HttpGet]
+        [Route("list-enterprise")]
+        [Authorize(Roles = "Administrator")]
+        public async Task<IActionResult> ListEnterprisesAsync([FromQuery]int page)
+        {
+            var enterprises = await _enterpriseEmployeeService.GetListEnterprisesAsync(page);
+            return Ok(enterprises);
+        }
+        
+        [HttpGet]
+        [Authorize(Roles = "Administrator")]
+        public async Task<IActionResult> GetEnterprisesAsync([FromQuery]int id)
+        {
+            var enterprises = await _enterpriseEmployeeService.GetEnterprisesAsync(id);
+            return Ok(enterprises);
+        }
+
+        [Route("register")]
+        [HttpPost]
+        [Authorize(Roles = "Administrator")]
+        public async Task<IActionResult> RegisterEnterprisesAsync(EnterpriseModel enterpriseModel)
+        {
+            var result = await _enterpriseEmployeeService.CreateEnterprise(enterpriseModel);
+            return Ok(result);
+        }
+
+
+        [Route("update")]
+        [HttpPut]
+        [Authorize(Roles = "Administrator")]
+        public async Task<IActionResult> UpdateEnterpriseAsync(EnterpriseModel enterpriseModel)
+        {
+            var result = await _enterpriseEmployeeService.UpdateEnterprise(enterpriseModel);
+            return Ok(result);
+        }
+
+        [Route("lock-enterprise")]
+        [HttpDelete]
+        [Authorize(Roles = "Administrator")]
+        public async Task<IActionResult> LockEnterpriseAsync([FromQuery] bool islock, [FromQuery] int enterpriseId)
+        {
+            var result = await _enterpriseEmployeeService.LockEnterprise(islock, enterpriseId);
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Administrator, EmployeeAdmin")]
+        [Route("upload-file")]
+        public async Task<IActionResult> UploadAsync(IFormFile file)
+        {
+            var fileName = "user_" + Guid.NewGuid();
+            var fileNameCurrent = "";
+            var uploadDirecotroy = "Uploads/Enterprises/";
+            var imageURL = await _fileService.UploadFile(file, fileName, fileNameCurrent, uploadDirecotroy);
+            return Ok(imageURL);
         }
 
         [Route("employee")]

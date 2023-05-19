@@ -9,6 +9,7 @@ export default {
       refreshToken: null,
       userId: null,
       fullName: "",
+      avatar: "",
       roles: null,
       isActiveLoader: false,
     };
